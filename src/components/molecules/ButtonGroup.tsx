@@ -19,10 +19,18 @@ export default function ButtonGroup({ direction }: ButtonGroupProps) {
 
     return (
         <div className={`flex gap-5 flex-${direction}`}>
-            <Button content="Dashboard" variant="primary" onClick={() => handleClick("#a")} />
-            <Button content="About me" variant="primary" onClick={() => handleClick("#")} />
-            <Button content="Skills" variant="primary" onClick={() => handleClick("#")} />
-            <Button content="Projects" variant="primary" onClick={() => handleClick("#projects")} />
+            <Button variant="primary" onClick={() => handleClick("#a")}>
+                Dashboard
+            </Button>
+            <Button variant="primary" onClick={() => handleClick("#")}>
+                About me
+            </Button>
+            <Button variant="primary" onClick={() => handleClick("#")}>
+                Skills
+            </Button>
+            <Button variant="primary" onClick={() => handleClick("#projects")}>
+                Projects
+            </Button>
         </div>
     )
 }

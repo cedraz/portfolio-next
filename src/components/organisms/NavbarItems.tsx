@@ -21,7 +21,9 @@ export default function NavbarItems({ handleClick }: NavbarItemsProps) {
             </div>
 
             <div className="hidden md:flex flex-1 items-center justify-end ">
-                <Button content="Contact me" variant="secondary" onClick={() => handleClick("teste")} />
+                <Button variant="secondary" onClick={() => handleClick("teste")}>
+                    Contact me
+                </Button>
             </div>
         </>
     )

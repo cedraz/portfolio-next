@@ -2,30 +2,38 @@
 import * as React from "react"
 
 // Components
-import Title from "../atoms/Title"
+import Button from "../atoms/Button"
+import ProjectsCardsGroup from "../organisms/ProjectsCardsGroup"
 
 // Projects data
-import { projectDataInterface } from "../../@types/interfaces"
 import { projects as projectsData, projectsCategories } from "../../utils/data/data"
-import Button from "../atoms/Button"
-import CardsGroup from "../organisms/CardsGroup"
+import { projectDataInterface } from "../../@types/interfaces"
 
 export default function Projects() {
     const [projects, setProjects] = React.useState<projectDataInterface[]>([])
     const [active, setActive] = React.useState(0)
     const [category, setCategory] = React.useState("all")
+    const [ showAll, setShowAll ] = React.useState(false)
 
     React.useEffect(() => {
         if (category === "all") {
-            setProjects(projectsData)
+            if (showAll) {
+                setProjects(projectsData)
+            } else {
+                setProjects(projectsData.slice(0, 3))
+            }
         } else {
             const filteredProjects = projectsData.filter((project: projectDataInterface) => {
                 return project.category === category
             })
 
-            setProjects(filteredProjects)
+            if (showAll) {
+                setProjects(filteredProjects)
+            } else {
+                setProjects(filteredProjects.slice(0, 3))
+            }
         }
-    }, [category])
+    }, [category, showAll])
 
     const handleClickCategory = ({ index, category }: { index: number, category: string }) => {
         setActive(index)
@@ -40,13 +48,21 @@ export default function Projects() {
                     {projectsCategories.map((category, index) => (
                         <Button
                             key={index}
-                            content={category}
                             variant={active === index ? "secondary" : "text"}
-                            onClick={() => handleClickCategory({ category, index })}
-                        />
+                            onClick={() => handleClickCategory({ index, category })}
+                        >
+                            {category}
+                        </Button>
                     ))}
                 </div>
-                <CardsGroup projects={projects} />
+                <ProjectsCardsGroup projects={projects} />
+                <Button 
+                    onClick={() => setShowAll(!showAll)}
+                    variant="primary" 
+                    style={{marginTop: "30px"}}
+                >
+                    {showAll ? "Show less" : "Show more"}
+                </Button>
             </div>
         </section>
     )

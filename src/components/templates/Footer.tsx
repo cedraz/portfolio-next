@@ -17,7 +17,7 @@ export default function Footer() {
         <footer className="bg-background-secondary shadow">
             <div className="w-full max-w-7xl mx-auto px-6 p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <a href="#" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <a href="#" className="flex justify-center sm:justify-start items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <GlowingText />
                     </a>
                     <FooterItems links={links}/>

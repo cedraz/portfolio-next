@@ -5,7 +5,7 @@ import * as React from "react"
 // import { useRouter } from "next/navigation"
 
 // Components
-import Menu from "../organisms/Menu"
+import NavbarMenu from "../organisms/NavbarMenu"
 import NavbarItems from "../organisms/NavbarItems"
 
 export default function Navbar() {
@@ -47,7 +47,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <Menu open={open} handleClick={() => handleClick("teste")} />
+            <NavbarMenu open={open} handleClick={() => handleClick("teste")} />
 
         </nav>
     )

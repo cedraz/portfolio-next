@@ -16,7 +16,9 @@ export default function Menu({ open, handleClick }: MenuProps) {
                 <div className="md:hidden" id="mobile-menu">
                     <div className="flex flex-col px-2 pb-3 pt-2 gap-y-5">
                         <ButtonGroup direction="col"/>
-                        <Button content="Contact me" variant="secondary" onClick={() => handleClick("teste")} />
+                        <Button variant="secondary" onClick={() => handleClick("teste")}>
+                            Contact me
+                        </Button>
                     </div>
                 </div>
             )}

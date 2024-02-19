@@ -26,7 +26,10 @@ export default function Hero() {
                         <TypingAnimation />
                     </div>
                     <div className="mr-auto mt-5 text-center lg:text-start">
-                        <Button content="Contact me" variant="secondary" onClick={() => handleClick()} />
+                        <Button variant="secondary" onClick={() => handleClick()} >
+                            Contact me
+                        </Button>
+
                     </div>
                 </div>
 
