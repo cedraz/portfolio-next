@@ -62,7 +62,7 @@ export default function Card(project: projectDataInterface) {
                     {project.link &&
                         (
                             <Button variant="primary" icon={(<Link size={22} />)} onClick={() => handleClick(project.link)}>
-                                Abrir
+                                Link
                             </Button>
                         )
                     }

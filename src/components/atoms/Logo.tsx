@@ -3,6 +3,6 @@ import * as React from "react"
 
 export default function Logo() {
     return (
-        <Code size={32} color="#333333" />
+        <Code size={32} color="#fff" />
     )
 }

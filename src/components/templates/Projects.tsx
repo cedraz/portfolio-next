@@ -8,6 +8,7 @@ import ProjectsCardsGroup from "../organisms/ProjectsCardsGroup"
 // Projects data
 import { projects as projectsData, projectsCategories } from "../../utils/data/data"
 import { projectDataInterface } from "../../@types/interfaces"
+import Title from "../atoms/Title"
 
 export default function Projects() {
     const [projects, setProjects] = React.useState<projectDataInterface[]>([])
@@ -43,8 +44,8 @@ export default function Projects() {
     return (
         <section className="bg-background-secondary h-full" id="projects">
             <div className="mx-auto max-w-7xl px-6 py-16 text-white flex flex-col items-center">
-                <h1 className="text-4xl font-bold text-center mb-10">Projetos</h1>
-                <div className="flex flex-row flex-wrap gap-5 items-center  justify-center">
+                <Title>Projects</Title>
+                <div className="flex flex-row flex-wrap gap-3 items-center  justify-center">
                     {projectsCategories.map((category, index) => (
                         <Button
                             key={index}
