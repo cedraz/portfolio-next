@@ -1,14 +1,12 @@
+/* eslint-disable react/prop-types */
 import * as React from "react"
 
-interface FooterLinkProps {
-    link: string
-    title: string
-}
+type FooterLinkProps = React.ComponentProps<"a">
 
-export default function FooterLink({ link, title }: FooterLinkProps) {
+export default function FooterLink(props: FooterLinkProps) {
     return (
         <li>
-            <a href={link} className="hover:underline">{title}</a>
+            <a href={props.href} className="hover:underline" {...props}/>
         </li>
     )
 }

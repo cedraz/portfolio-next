@@ -1,10 +1,12 @@
 import * as React from "react"
 
-export type TitleProps = React.ComponentProps<"h1">
+export type TitleProps = React.ComponentProps<"h1"> & {
+    withMargin: boolean
+}
 
-export default function Title(props: TitleProps) {
+export default function Title({withMargin, ...props}: TitleProps) {
 
     return (
-        <h1 className="text-4xl font-bold text-white mb-9" {...props}></h1>
+        <h2 className={`text-[33px] font-semibold tracking-tight text-white ${withMargin ? "mb-16" : "mb-0"}`} {...props}/>
     )
 }

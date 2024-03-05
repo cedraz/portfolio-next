@@ -1,7 +1,7 @@
 import { projectDataInterface, socialMediaDataInterface } from "@/@types/interfaces"
 
-import ProjectImage from "../../../public/ProjectImage.png"
-import VoiceoverPortfolio from "../../../public/VoiceoverPortfolio.png"
+import ProjectImage from "@/assets/ProjectImage.png"
+import VoiceoverPortfolio from "@/assets/VoiceoverPortfolio.png"
 
 export const projectsCategories: string[] = ["all", "frontend", "backend"]
 

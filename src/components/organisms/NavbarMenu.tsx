@@ -1,7 +1,7 @@
 import * as React from "react"
 
 // Components
-import Button from "../atoms/Button"
+import { Button } from "../ui/button"
 import ButtonGroup from "../molecules/ButtonGroup"
 
 interface MenuProps {

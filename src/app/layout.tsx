@@ -1,9 +1,10 @@
 import * as React from "react"
 import "./globals.css"
 import { GeistSans } from "geist/font/sans"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
-    title: "Portfolio",
+    title: "Cedraz",
     description: "Icaro Cedraz's portfolio",
 }
 
@@ -14,7 +15,15 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={GeistSans.className}>{children}</body>
+            <body className={GeistSans.className}>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    disableTransitionOnChange
+                >
+                    {children}  
+                </ThemeProvider>
+            </body>
         </html>
     )
 }

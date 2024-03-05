@@ -5,7 +5,7 @@ import * as React from "react"
 import { useRouter } from "next/navigation"
 
 // Components
-import Button from "../atoms/Button"
+import { Button } from "../ui/button"
 
 interface ButtonGroupProps {
     direction: "row" | "col"
@@ -19,16 +19,13 @@ export default function ButtonGroup({ direction }: ButtonGroupProps) {
 
     return (
         <div className={`flex gap-5 flex-${direction}`}>
-            <Button variant="primary" onClick={() => handleClick("#a")}>
-                Dashboard
-            </Button>
-            <Button variant="primary" onClick={() => handleClick("#")}>
+            <Button variant="outline" onClick={() => handleClick("#about")}>
                 About me
             </Button>
-            <Button variant="primary" onClick={() => handleClick("#")}>
+            <Button variant="outline" onClick={() => handleClick("#journey")}>
                 Skills
             </Button>
-            <Button variant="primary" onClick={() => handleClick("#projects")}>
+            <Button variant="outline" onClick={() => handleClick("#projects")}>
                 Projects
             </Button>
         </div>

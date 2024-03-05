@@ -1,7 +1,7 @@
 import * as React from "react"
 
 // Components
-import Button from "../atoms/Button"
+import { Button } from "../ui/button"
 import ButtonGroup from "../molecules/ButtonGroup"
 import LogoButton from "../molecules/LogoButton"
 
@@ -21,7 +21,7 @@ export default function NavbarItems({ handleClick }: NavbarItemsProps) {
             </div>
 
             <div className="hidden md:flex flex-1 items-center justify-end ">
-                <Button variant="secondary" onClick={() => handleClick("teste")}>
+                <Button onClick={() => handleClick("#contact")}>
                     Contact me
                 </Button>
             </div>

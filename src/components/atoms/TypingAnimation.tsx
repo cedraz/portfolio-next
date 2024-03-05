@@ -17,7 +17,7 @@ export default function TypingAnimation() {
             ]}
             wrapper="span"
             speed={50}
-            className="xs:text-4xl md:text-6xl text-white font-bold"
+            className="text-4xl md:text-6xl text-white font-bold"
             repeat={Infinity}
         />
     )

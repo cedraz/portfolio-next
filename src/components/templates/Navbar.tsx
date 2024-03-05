@@ -2,14 +2,14 @@
 import * as React from "react"
 
 // Next
-// import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 
 // Components
 import NavbarMenu from "../organisms/NavbarMenu"
 import NavbarItems from "../organisms/NavbarItems"
 
-export default function Navbar() {
-    // const router = useRouter()
+export function Navbar() {
+    const router = useRouter()
 
     const MenuIcon = () => (<svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round">
@@ -32,7 +32,7 @@ export default function Navbar() {
     }
 
     const handleClick = (link: string) => {
-        console.log(link)
+        router.push(link)
     }
 
     return (

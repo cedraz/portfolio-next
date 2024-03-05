@@ -2,7 +2,7 @@
 import * as React from "react"
 
 // Next
-import Subtract from "../../../public/Subtract.svg"
+import Subtract from "@/assets/Subtract.svg"
 import Image from "next/image"
 
 export default function TextoBrilhante() {

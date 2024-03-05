@@ -6,13 +6,13 @@ import GlowingText from "@/components/organisms/GlowingText"
 import FooterItems from "../organisms/FooterItems"
 
 const links = [
-    { link: "#", title: "Home" },
-    { link: "#", title: "About me" },
-    { link: "#", title: "Projects" },
-    { link: "#", title: "Contact me" },
+    { href: "#", title: "Home" },
+    { href: "#", title: "About me" },
+    { href: "#", title: "Projects" },
+    { href: "#", title: "Contact me" },
 ]
 
-export default function Footer() {
+export function Footer() {
     return (
         <footer className="bg-background-secondary shadow">
             <div className="w-full max-w-7xl mx-auto px-6 p-4 md:py-8">

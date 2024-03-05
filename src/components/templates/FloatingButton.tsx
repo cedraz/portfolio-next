@@ -4,7 +4,7 @@ import * as React from "react"
 // Phosphor Icons
 import { ChatTeardropDots } from "@phosphor-icons/react"
 
-export default function FloatingButton() {
+export function FloatingButton() {
     const handleClick = () => {
         window.open("https://wa.me/5571999440042", "_blank")
     }
