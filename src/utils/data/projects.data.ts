@@ -2,6 +2,8 @@ import { projectDataInterface, socialMediaDataInterface } from "@/@types/interfa
 
 import ProjectImage from "@/assets/ProjectImage.png"
 import VoiceoverPortfolio from "@/assets/VoiceoverPortfolio.png"
+import ExpenseManager from "@/assets/ExpenseManager.svg"
+import AxeNoticias from "@/assets/AxeNoticias.svg"
 
 export const projectsCategories: string[] = ["all", "frontend", "backend"]
 
@@ -14,7 +16,7 @@ export const projects: projectDataInterface[] = [
         It's a simple app that allows you to add, remove and edit expenses. 
         It also has a filter feature that allows you to filter expenses by year.`,
         category: "frontend",
-        image: ProjectImage,
+        image: ExpenseManager,
         link: "https://gerenciadordedespesas.vercel.app/",
         repository: "https://github.com/cedraz/expense-manager-front",
         tags: ["next.js", "react", "typescript", "material-ui", "axios", "react-hook-form", "toastify"]
@@ -25,7 +27,7 @@ export const projects: projectDataInterface[] = [
         description: `The frontend of an expense manager app, made with Next.js, TypeScript and Material UI. 
         It's a simple app that allows you to add, remove and edit expenses.`,
         category: "backend",
-        image: ProjectImage,
+        image: ExpenseManager,
         link: "",
         repository: "https://github.com/cedraz/expense-manager-back",
         tags: ["node", "typescript", "fastify", "docker", "prisma orm", "postgresql"]
@@ -59,7 +61,7 @@ export const projects: projectDataInterface[] = [
         description: `The frontend of an expense manager app, made with Next.js, TypeScript and Material UI. 
         It's a simple app that allows you to add, remove and edit expenses.`,
         category: "frontend",
-        image: ProjectImage,
+        image: AxeNoticias,
         link: "https://axenoticias.vercel.app/",
         repository: "https://github.com/cedraz/desafio-ptdev-front",
         tags: ["html", "css", "javascript"]
@@ -70,7 +72,7 @@ export const projects: projectDataInterface[] = [
         description: `The frontend of an expense manager app, made with Next.js, TypeScript and Material UI. 
         It's a simple app that allows you to add, remove and edit expenses.`,
         category: "backend",
-        image: ProjectImage,
+        image: AxeNoticias,
         link: "",
         repository: "https://github.com/cedraz/desafio-ptdev-back",
         tags: ["strapi", "javascript", "postgresql", "cloudnary", "neondb"]

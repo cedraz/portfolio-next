@@ -1,0 +1,38 @@
+{
+    "Navbar": {
+      "aboutMe": "About me",
+      "journey": "Journey",
+      "projects": "Projects",
+      "contactMe": "Contact me"
+    },
+    "Hero": {
+      "h1": "My name is Ícaro Cedraz and I'm a",
+      "typingAnimation": {
+        "1": "Full Stack Developer",
+        "2": "Frontend Developer",
+        "3": "Backend Developer"
+      },
+      "button": "Contact me"
+    },
+    "AboutMe": {
+      "h1": "About me",
+      "p": "I'm a full stack developer, with a focus on backend development. I'm passionate about technology and I'm always looking for new challenges and opportunities to learn and grow."
+    },
+    "Journey": {
+      "1": {
+        "time": "January 2024 - Present",
+        "title": "Backend Manager at TITAN ci",
+        "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia."
+      },
+      "2": {
+        "time": "September 2023 - January 2024",
+        "title": "Full stack developer at TITAN ci",
+        "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia."
+      },
+      "3": {
+        "time": "May 2023 - September 2023",
+        "title": "Trainee in development board of TITAN ci",
+        "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia."
+      }
+    }
+}

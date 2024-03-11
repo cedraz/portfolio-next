@@ -12,10 +12,10 @@ before:opacity-0 transition-opacity duration-500 hover:before:opacity-100 border
 
 type GlowingImageProps = {
     image: StaticImageData
-    title: string
+    alt: string
 }
 
-export function GlowingImage({title, image}: GlowingImageProps) {
+export function GlowingImage({alt, image}: GlowingImageProps) {
     const divRef = React.useRef<HTMLDivElement>(null)
 
     React.useEffect(() => {
@@ -44,7 +44,7 @@ export function GlowingImage({title, image}: GlowingImageProps) {
         <div ref={divRef} className={className}>
             <Image
                 src={image}
-                alt={title}
+                alt={alt}
                 width={400}
                 height={300}
                 className="rounded-t-lg w-full"

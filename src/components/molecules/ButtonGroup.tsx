@@ -11,22 +11,26 @@ interface ButtonGroupProps {
     direction: "row" | "col"
 }
 
+// next intl
+import { useTranslations } from "next-intl"
+
 export default function ButtonGroup({ direction }: ButtonGroupProps) {
     const router = useRouter()
     const handleClick = (link: string) => {
         router.push(`/${link}`)
     }
+    const t = useTranslations("Navbar")
 
     return (
-        <div className={`flex gap-5 flex-${direction}`}>
-            <Button variant="outline" onClick={() => handleClick("#about")}>
-                About me
+        <div className={`flex gap-5 items-center flex-${direction}`}>
+            <Button variant="outline" className="w-fit" onClick={() => handleClick("#about")}>
+                {t("aboutMe")}
             </Button>
-            <Button variant="outline" onClick={() => handleClick("#journey")}>
-                Skills
+            <Button variant="outline" className="w-fit" onClick={() => handleClick("#journey")}>
+                {t("journey")}
             </Button>
-            <Button variant="outline" onClick={() => handleClick("#projects")}>
-                Projects
+            <Button variant="outline" className="w-fit" onClick={() => handleClick("#projects")}>
+                {t("projects")}
             </Button>
         </div>
     )

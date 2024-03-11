@@ -1,0 +1,23 @@
+{
+  "Navbar": {
+    "aboutMe": "Sobre mim",
+    "journey": "Jornada",
+    "projects": "Projetos",
+    "contactMe": "Contato"
+  },
+  "Hero": {
+    "h1": "Meu nome é Ícaro Cedraz e eu sou",
+    "typingAnimation": {
+      "1": "Desenvolvedor Full Stack",
+      "2": "Desenvolvedor Frontend",
+      "3": "Desenvolvedor Backend"
+    },
+    "button": "Contato"
+  },
+  "About": {
+    "h1": "Sobre mim"
+  },
+  "Journey": {
+    "h1": "Jornada"
+  }
+}

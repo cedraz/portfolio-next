@@ -11,13 +11,13 @@ export function Journey() {
                 <Title withMargin={true}>
                     Journey
                 </Title>
-                <div className="flex justify-between gap-3">
+                <div className="flex flex-col gap-16  md:flex-row justify-between md:gap-5">
                     <div className="flex flex-col items-center">
-                        <h1>Experience</h1>
+                        <h1 className="text-2xl mb-4">Experience</h1>
                         <Experience />
                     </div>
                     <div className="flex flex-col items-center">
-                        <h1>Education</h1>
+                        <h1 className="text-2xl mb-4">Education</h1>
                         <Education />
                     </div>
                 </div>

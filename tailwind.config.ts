@@ -13,15 +13,6 @@ const config = {
         container: {
             center: true,
             padding: "2rem",
-            screens: {
-                "xs": "300px",
-                "sm": "640px",
-                "md": "768px",
-                "lg": "1024px",
-                "teste": "1150px",
-                "xl": "1280px",
-                "2xl": "1536px",
-            }
         },
         extend: {
             colors: {
@@ -81,6 +72,15 @@ const config = {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
             },
+            screens: {
+                "xs": "300px",
+                "sm": "640px",
+                "md": "768px",
+                "lg": "1024px",
+                "teste": "1150px",
+                "xl": "1280px",
+                "2xl": "1536px",
+            }
         },
     },
     plugins: [require("tailwindcss-animate")],

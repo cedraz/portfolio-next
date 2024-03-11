@@ -1,87 +1,43 @@
+"use client"
 import * as React from "react"
+import Image from "next/image"
 
 import ProfilePic from "@/assets/ProfilePic.png"
 
-// Shadcn
-import { Button } from "@/components/ui/button"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+// Components
 import {
     Tabs,
     TabsContent,
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
-import Image from "next/image"
+import Title from "../atoms/Title"
+import { ContactCard } from "../organisms/ContactCard"
 
 export function ContactMe() {
+
     return (
         <section id="contact">
             <div className="grid mx-auto max-w-7xl px-6 py-8 lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
-                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                    <Image src={ProfilePic} alt="contact-me">
-
-                    </Image>
+                <div className="col-span-12 place-self-center">
+                    <Title withMargin={true}>
+                        Contact me
+                    </Title>
                 </div>
-                <div className="lg:justify-self-end place-self-center sm:col-span-12 lg:col-span-7">
-                    <Tabs defaultValue="account" className="w-full md:w-[480px]">
+                <div className="hidden lg:mt-0 lg:col-span-6 lg:flex max-w-[500px] h-fit">
+                    <Image src={ProfilePic} alt="contact-me"/>
+                </div>
+                <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6 min-h-[560px]">
+                    <Tabs defaultValue="email" className="w-full teste:w-[550px]">
                         <TabsList className="grid grid-cols-2">
-                            <TabsTrigger value="account">Email</TabsTrigger>
-                            <TabsTrigger value="password">Whatsapp</TabsTrigger>
+                            <TabsTrigger value="email">Email</TabsTrigger>
+                            <TabsTrigger value="whatsapp">Whatsapp</TabsTrigger>
                         </TabsList>
-                        <TabsContent value="account">
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle>Account</CardTitle>
-                                    <CardDescription>
-              Make changes to your account here. Click save when you&apos;re done.
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="space-y-2">
-                                    <div className="space-y-1">
-                                        <Label htmlFor="name">Name</Label>
-                                        <Input id="name" defaultValue="Pedro Duarte" />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <Label htmlFor="username">Username</Label>
-                                        <Input id="username" defaultValue="@peduarte" />
-                                    </div>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button>Save changes</Button>
-                                </CardFooter>
-                            </Card>
+                        <TabsContent value="email">
+                            <ContactCard deliveryMethod="email" />
                         </TabsContent>
-                        <TabsContent value="password">
-                            <Card >
-                                <CardHeader>
-                                    <CardTitle>Password</CardTitle>
-                                    <CardDescription>
-              Change your password here. After saving, you&apos;ll be logged out.
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="space-y-2">
-                                    <div className="space-y-1">
-                                        <Label htmlFor="current">Current password</Label>
-                                        <Input id="current" type="password" />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <Label htmlFor="new">New password</Label>
-                                        <Input id="new" type="password" />
-                                    </div>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button>Save password</Button>
-                                </CardFooter>
-                            </Card>
+                        <TabsContent value="whatsapp">
+                            <ContactCard deliveryMethod="whatsapp" />
                         </TabsContent>
                     </Tabs>
                 </div>

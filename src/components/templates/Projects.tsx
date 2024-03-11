@@ -4,11 +4,11 @@ import * as React from "react"
 // Components
 import { Button } from "../ui/button"
 import ProjectsCardsGroup from "../organisms/ProjectsCardsGroup"
+import Title from "../atoms/Title"
 
 // Projects data
-import { projects as projectsData, projectsCategories } from "../../utils/data/projects"
+import { projects as projectsData, projectsCategories } from "../../utils/data/projects.data"
 import { projectDataInterface } from "../../@types/interfaces"
-import Title from "../atoms/Title"
 
 export function Projects() {
     const [ projects, setProjects ] = React.useState<projectDataInterface[]>([])
@@ -39,8 +39,6 @@ export function Projects() {
                 setProjects(filteredProjects.slice(0, 3))
                 setProjectsNumber(3)
             }
-
-            
         }
     }, [category, showAll])
 
@@ -53,7 +51,9 @@ export function Projects() {
     return (
         <section className="bg-background-default h-full" id="projects">
             <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center">
-                <Title withMargin={true}>Projects</Title>
+                <Title withMargin={true}>
+                    Projects
+                </Title>
                 <div className="flex flex-row flex-wrap gap-3 items-center justify-center">
                     {projectsCategories.map((category, index) => (
                         <Button

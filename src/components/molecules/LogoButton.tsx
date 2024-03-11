@@ -1,7 +1,7 @@
 import * as React from "react"
 
 // Components
-import Logo from "../atoms/Logo"
+import { Logo } from "../atoms/Logo"
 import Title from "../atoms/Title"
 
 export default function LogoButton() {

@@ -10,9 +10,7 @@ import { About } from "@/components/templates/About"
 import { Journey } from "@/components/templates/Journey"
 import { ContactMe } from "@/components/templates/ContactMe"
 
-
 export default function Home() {
-
     return (
         <main className="bg-black h-full">
             <Navbar />
