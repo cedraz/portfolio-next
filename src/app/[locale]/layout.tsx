@@ -28,7 +28,7 @@ export default function RootLayout({
     const messages = useMessages()
 
     return (
-        <html lang={locale}>
+        <html lang={locale} suppressHydrationWarning>
             <body className={GeistSans.className}>
                 <NextIntlClientProvider
                     locale={locale}
@@ -37,7 +37,6 @@ export default function RootLayout({
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="dark"
-                        enableSystem
                         disableTransitionOnChange
                     >
                         {children}  

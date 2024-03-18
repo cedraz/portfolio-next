@@ -11,7 +11,7 @@ export type TimelineItemProps = {
 
 export function TimelineItem({ order, time, title, children} : TimelineItemProps) {
     return (
-        <li className={`${order === "initial" ? "mb-0" : "mb-10"} ms-4`}>
+        <li className={`${order === "initial" ? "mb-0" : "mb-6"} ms-4`}>
             <div className={`
                 absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-white 
                 ${order === "final" ? "bg-black" : "bg-white"}

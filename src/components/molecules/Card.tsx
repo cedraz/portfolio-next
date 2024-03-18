@@ -3,14 +3,14 @@ import * as React from "react"
 
 // Components
 import { buttonVariants } from "../ui/button"
+import { GlowingImage } from "../atoms/GlowingImage"
+import { Badge } from "../ui/badge"
 
 // Phosphor icons
 import { GitBranch, Link } from "@phosphor-icons/react"
 
 // Types
 import { projectDataInterface } from "@/@types/interfaces"
-import { Badge } from "../ui/badge"
-import { GlowingImage } from "../atoms/GlowingImage"
 
 export default function Card(project: projectDataInterface) {
     const divRef = React.useRef<HTMLDivElement>(null)

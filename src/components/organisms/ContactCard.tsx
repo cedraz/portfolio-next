@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useRouter } from "next/navigation"
 
 // React Hook Form
 import { useForm } from "react-hook-form"
@@ -21,63 +22,96 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/components/ui/use-toast"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Input } from "../ui/input"
+import { toast } from "../ui/use-toast"
 
-const FormSchema = z.object({
-    name: z
-        .string()
-        .min(3, {
-            message: "Name must be at least 3 characters long.",
-        })
-        .max(40, {
-            message: "Name must be at most 60 characters long.",
-        }),
-    category: z
-        .enum(["work-oportunity", "partnership", "other"],
-            {
-                required_error: "You must select at least one category.",
-            }
-        ),
-    message: z
-        .string()
-        .min(5, {
-            message: "Message must be at least 5 characters long.",
-        })
-})
+// Resend
+import { SEND } from "@/app/api/send/route"
 
 type ContactCardProps = {
     deliveryMethod: "email" | "whatsapp"
 }
 
 export function ContactCard({ deliveryMethod }: ContactCardProps) {
-    const { toast } = useToast()
+    const router = useRouter()
+
+    let emailSchema: z.ZodString | z.ZodOptional<z.ZodString> = z.string().email({
+        message: "You must provide a valid email address.",
+    })
+    
+    if (deliveryMethod === "whatsapp") {
+        emailSchema = emailSchema.optional()
+    }
+
+    const FormSchema = z.object({
+        name: z
+            .string()
+            .min(3, {
+                message: "Name must be at least 3 characters long.",
+            })
+            .max(40, {
+                message: "Name must be at most 40 characters long.",
+            }),
+        email: emailSchema,
+        category: z
+            .enum(["work-oportunity", "partnership", "other"],
+                {
+                    required_error: "You must select at least one category.",
+                }
+            ),
+        message: z
+            .string()
+            .min(5, {
+                message: "Message must be at least 5 characters long.",
+            })
+    })
 
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
-            name: "",
-            message: "",
+            name: "", // Set an initial empty string
         },
     })
 
-    function onSubmit(data: z.infer<typeof FormSchema>) {
+    async function onSubmit(data: z.infer<typeof FormSchema>) {
+        if (deliveryMethod === "email") {
+            await SEND({...data})
 
-        const newData = {
-            ...data,
-            deliveryMethod,
+            let message = data.message
+
+            if (message.length >= 50) {
+                message = message.slice(0, 50) + "..."
+            }
+
+            toast({
+                title: "You submitted the following values:",
+                description: (
+                    <pre className="mt-2 w-fit rounded-md bg-slate-950 p-4">
+                        <code className="text-white overflow-hidden">{JSON.stringify({
+                            name: data.name,
+                            email: data.email,
+                            category: data.category,
+                            message: message,
+                        }, null, 2)}</code>
+                    </pre>
+                ),
+                duration: 50000,
+            })
         }
 
-        toast({
-            title: "You submitted the following values:",
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-                    <code className="text-white">{JSON.stringify(newData, null, 2)}</code>
-                </pre>
-            ),
-        })
+        if (deliveryMethod === "whatsapp") {
+            const message = `
+Olá, me chamo ${data.name} e gostaria de falar com você.
+
+Gostaria de propor uma ${data.category}.
+
+${data.message}
+            `
+
+            router.push(`https://wa.me/5571999440042?text=${encodeURIComponent(message)}`)
+        }
     }
 
     return (
@@ -90,7 +124,7 @@ export function ContactCard({ deliveryMethod }: ContactCardProps) {
             </CardHeader>
             <CardContent>
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <form onSubmit={form.handleSubmit(onSubmit)}>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <FormField
                                 control={form.control}
@@ -109,7 +143,7 @@ export function ContactCard({ deliveryMethod }: ContactCardProps) {
                                 control={form.control}
                                 name="category"
                                 render={({ field }) => (
-                                    <FormItem className="flex-shrink">
+                                    <FormItem className="flex-grow w-full">
                                         <FormLabel>Category</FormLabel>
                                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                                             <FormControl>
@@ -124,24 +158,39 @@ export function ContactCard({ deliveryMethod }: ContactCardProps) {
                                             </SelectContent>
                                         </Select>
                                         <FormDescription>
-                                            Qual o contexto da sua mensagem?
+                                            Qual o objetivo da sua mensagem?
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
                                 )}
                             />
                         </div>
+                        { deliveryMethod === "email" && (
+                            <FormField
+                                control={form.control}
+                                name="email"
+                                render={({ field }) => (
+                                    <FormItem className="flex-grow w-full sm:mt-5 lg:mt-0">
+                                        <FormLabel>Email</FormLabel>
+                                        <FormControl>
+                                            <Input placeholder="cedraz@email.com" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                        )}
                         <FormField
                             control={form.control}
                             name="message"
                             render={({ field }) => (
-                                <FormItem>
+                                <FormItem className="mt-5">
                                     <FormLabel>Message</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             maxLength={590}
                                             placeholder="Tell us a little bit about yourself"
-                                            className="h-[220px] resize-none"
+                                            className="min-h-[140px] max-h-[220px]"
                                             {...field}
                                         />
                                     </FormControl>
@@ -152,7 +201,7 @@ export function ContactCard({ deliveryMethod }: ContactCardProps) {
                                 </FormItem>
                             )}
                         />
-                        <Button type="submit">Submit</Button>
+                        <Button className="mt-5" type="submit">Submit</Button>
                     </form>
                 </Form>
             </CardContent>

@@ -10,8 +10,20 @@ import { useTranslations } from "next-intl"
 import { Button } from "../ui/button"
 
 const Data1 = () => {
+    const t = useTranslations("Journey.timeline1")
+    
+    return (
+        <div className="flex flex-col">
+            <p className="mt-3">
+                {t("1.p")}
+            </p>
+        </div>
+    )
+    
+}
 
-    const t = useTranslations("Journey")
+const Data2 = () => {
+    const t = useTranslations("Journey.timeline1")
 
     return (
         <div className="flex flex-col mt-5">
@@ -22,10 +34,10 @@ const Data1 = () => {
                 />
             </div>
             <div className="flex flex-col gap-3">
-                <p className="mt-3 text-justify">
-                    {t("1.p")}
+                <p className="mt-3">
+                    {t("2.p")}
                 </p>
-                <Button className="w-fit">
+                <Button className="w-fit mt-3">
                     Linkedin
                 </Button>
             </div>
@@ -33,38 +45,30 @@ const Data1 = () => {
     )
 }
 
-
-
 export function Experience() {
-    const t = useTranslations("Journey")
+    const t = useTranslations("Journey.timeline1")
 
     const timelineData: TimelineData[] = [
         {
             time:( t("1.time")),
             title: t("1.title"),
             children: (
-                <p>
-                    I am currently working as a full-stack developer at a company called Company Name. I am 
-                    responsible for developing and maintaining the companys website, as well as developing new 
-                    features for the companys internal tools.
-                </p>
+                <Data1/>
             )
         },
         {
             time:( t("2.time")),
             title: t("2.title"),
             children: (
-                <Data1/>
+                <Data2/>
             )
         },
         {
             time:( t("3.time")),
             title: t("3.title"),
             children: (
-                <p>
-                    I worked as a back-end developer at a company called Company Name. I was responsible for developing and 
-                    maintaining the companys website, as well as developing new features for the companys internal tools.
-                </p>
+                <>
+                </>
             )
         }
     ]

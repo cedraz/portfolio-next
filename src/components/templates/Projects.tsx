@@ -49,7 +49,7 @@ export function Projects() {
     }
 
     return (
-        <section className="bg-background-default h-full" id="projects">
+        <section className="bg-background-secondary h-full" id="projects">
             <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center">
                 <Title withMargin={true}>
                     Projects

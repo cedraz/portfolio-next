@@ -24,7 +24,7 @@ export function Hero() {
                     <h1 className="max-w-2xl text-4xl text-center lg:text-start mb-2 font-extrabold tracking-tight leading-none md:text-5xl text-color-subtitle">
                         {t("h1")}
                     </h1>
-                    <div className="min-h-[81px] sm:min-h-[41px] lg:min-h-[100px] teste:min-h-[55px] xl:min-h-[120px] text-center lg:text-start">
+                    <div className="min-h-[81px] sm:min-h-[41px] lg:min-h-[100px] teste:min-h-[55px] text-center lg:text-start">
                         <TypingAnimation />
                     </div>
                     <div className="mr-auto mt-5 text-center lg:text-start">
