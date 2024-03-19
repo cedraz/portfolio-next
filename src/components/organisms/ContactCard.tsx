@@ -30,15 +30,21 @@ import { toast } from "../ui/use-toast"
 // Resend
 import { SEND } from "@/app/api/send/route"
 
+// next intl
+import { useTranslations } from "next-intl"
+
 type ContactCardProps = {
     deliveryMethod: "email" | "whatsapp"
 }
 
 export function ContactCard({ deliveryMethod }: ContactCardProps) {
     const router = useRouter()
+    const t = useTranslations("ContactMe")
 
-    let emailSchema: z.ZodString | z.ZodOptional<z.ZodString> = z.string().email({
-        message: "You must provide a valid email address.",
+    let emailSchema: z.ZodString | z.ZodOptional<z.ZodString> = z.string({
+        required_error: t("email.errorRequired")
+    }).email({
+        message: t("email.errorInvalidEmail"),
     })
     
     if (deliveryMethod === "whatsapp") {
@@ -49,29 +55,31 @@ export function ContactCard({ deliveryMethod }: ContactCardProps) {
         name: z
             .string()
             .min(3, {
-                message: "Name must be at least 3 characters long.",
+                message: t("name.errorMinCharacters"),
             })
             .max(40, {
-                message: "Name must be at most 40 characters long.",
+                message: t("name.errorMaxCharacters"),
             }),
         email: emailSchema,
         category: z
-            .enum(["work-oportunity", "partnership", "other"],
+            .enum([t("category.options.1"), t("category.options.2"), t("category.options.3")],
                 {
-                    required_error: "You must select at least one category.",
+                    required_error: t("category.errorRequired"),
                 }
             ),
         message: z
-            .string()
+            .string({
+                required_error: t("message.errorRequired"),
+            })
             .min(5, {
-                message: "Message must be at least 5 characters long.",
+                message: t("message.errorMinCharacters"),
             })
     })
 
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
-            name: "", // Set an initial empty string
+            name: "",
         },
     })
 
@@ -117,9 +125,9 @@ ${data.message}
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Account</CardTitle>
+                <CardTitle>{t("card.title")}</CardTitle>
                 <CardDescription>
-                    Make changes to your account here. Click save when you&apos;re done.
+                    {t("card.description")}
                 </CardDescription>
             </CardHeader>
             <CardContent>
@@ -144,21 +152,21 @@ ${data.message}
                                 name="category"
                                 render={({ field }) => (
                                     <FormItem className="flex-grow w-full">
-                                        <FormLabel>Category</FormLabel>
+                                        <FormLabel>{t("category.label")}</FormLabel>
                                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                                             <FormControl>
                                                 <SelectTrigger className="min-w-[180px]">
-                                                    <SelectValue placeholder="Categoria" />
+                                                    <SelectValue placeholder={t("category.placeholder")} />
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                <SelectItem value="work-oportunity">Work Oportunity</SelectItem>
-                                                <SelectItem value="partnership">Partnership</SelectItem>
-                                                <SelectItem value="other">Other</SelectItem>
+                                                <SelectItem value={t("category.options.1")}>{t("category.options.1")}</SelectItem>
+                                                <SelectItem value={t("category.options.2")}>{t("category.options.2")}</SelectItem>
+                                                <SelectItem value={t("category.options.3")}>{t("category.options.3")}</SelectItem>
                                             </SelectContent>
                                         </Select>
                                         <FormDescription>
-                                            Qual o objetivo da sua mensagem?
+                                            {t("category.description")}
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>
@@ -185,23 +193,23 @@ ${data.message}
                             name="message"
                             render={({ field }) => (
                                 <FormItem className="mt-5">
-                                    <FormLabel>Message</FormLabel>
+                                    <FormLabel>{t("message.label")}</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             maxLength={590}
-                                            placeholder="Tell us a little bit about yourself"
+                                            placeholder={t("message.placeholder")}
                                             className="min-h-[140px] max-h-[220px]"
                                             {...field}
                                         />
                                     </FormControl>
                                     <FormDescription>
-                                        O que você deseja me comunicar?
+                                        {t("message.description")}
                                     </FormDescription>
                                     <FormMessage />
                                 </FormItem>
                             )}
                         />
-                        <Button className="mt-5" type="submit">Submit</Button>
+                        <Button className="mt-5" type="submit">{t("submit")}</Button>
                     </form>
                 </Form>
             </CardContent>

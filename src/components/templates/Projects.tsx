@@ -7,15 +7,24 @@ import ProjectsCardsGroup from "../organisms/ProjectsCardsGroup"
 import Title from "../atoms/Title"
 
 // Projects data
-import { projects as projectsData, projectsCategories } from "../../utils/data/projects.data"
+import { projectsObject } from "../../utils/data/projects.data"
 import { projectDataInterface } from "../../@types/interfaces"
 
+// next intl
+import { useTranslations } from "next-intl"
+
 export function Projects() {
+    const t = useTranslations("Projects")
+
     const [ projects, setProjects ] = React.useState<projectDataInterface[]>([])
     const [ active, setActive ] = React.useState(0)
     const [ category, setCategory ] = React.useState("all")
     const [ showAll, setShowAll ] = React.useState(false)
     const [ projectsNumber, setProjectsNumber ] = React.useState(0)
+
+    const projectsDataObject = projectsObject()
+    const projectsData = projectsDataObject.projects
+    const projectsCategories = projectsDataObject.projectsCategories
 
     React.useEffect(() => {
         if (category === "all") {
@@ -52,7 +61,7 @@ export function Projects() {
         <section className="bg-background-secondary h-full" id="projects">
             <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center">
                 <Title withMargin={true}>
-                    Projects
+                    { t("h1")}
                 </Title>
                 <div className="flex flex-row flex-wrap gap-3 items-center justify-center">
                     {projectsCategories.map((category, index) => (
@@ -72,7 +81,7 @@ export function Projects() {
                     variant="default" 
                     style={{marginTop: "30px"}}
                 >
-                    {showAll ? "Show less" : "Show more"}
+                    {showAll ? t("buttonShowLess") : t("buttonShowMore")}
                 </Button>
             </div>
         </section>

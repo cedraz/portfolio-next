@@ -80,5 +80,103 @@
         "title": "Ensino médio no Colégio Oficina"
       }
     }
+  },
+  "Projects": {
+    "h1": "Projetos",
+    "all": "todos",
+    "buttonShowMore": "Mostras mais",
+    "buttonShowLess": "Mostras menos",
+    "1": {
+      "title": "Gerenciador de despesas Frontend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "2": {
+      "title": "Gerenciador de despesas Backend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "3": {
+      "title": "Portfólio de locuções",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "4": {
+      "title": "Desafio Backend Picpay",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "5": {
+      "title": "Desafio PTDEV Frontend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "6": {
+      "title": "Desafio PTDEV Backend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "7": {
+      "title": "Desafio Fullstack Redway Frontend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "8": {
+      "title": "Desafio Fullstack Redway Backend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "9": {
+      "title": "Desafio VFlows",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "10": {
+      "title": "Portfólio Next",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    }
+  },
+  "ContactMe": {
+    "h1": "Contate me",
+    "card": {
+      "title": "Deseja me enviar uma mensagem?",
+      "description": "Preencha os campos abaixo e me envie uma mensagem. Ficarei feliz em te responder!"
+    },
+    "name": {
+      "label": "Nome",
+      "placeholder": "Digite seu nome",
+      "errorMinCharacters": "Nome deve ter no mínimo 3 caracteres.",
+      "errorMaxCharacters": "Nome deve ter no máximo 40 caracteres."
+    },
+    "category": {
+      "label": "Categoria",
+      "placeholder": "Selecione uma categoria",
+      "description": "Qual o objetivo da sua mensagem?",
+      "options": {
+        "1": "Oportunidade de trabalho",
+        "2": "Parceria",
+        "3": "Outro"
+      },
+      "errorRequired": "Selecione uma categoria."
+    },
+    "email": {
+      "label": "Email",
+      "errorRequired": "Campo de email é obrigatório.",
+      "errorInvalidEmail": "Digite um email válido."
+    },
+    "message": {
+      "label": "Mensagem",
+      "placeholder": "Digite sua mensagem",
+      "description": "O que você deseja me comunicar?",
+      "errorRequired": "Campo de mensagem é obrigatório.",
+      "errorMinCharacters": "Mensagem deve ter no mínimo 5 caracteres."
+    },
+    "submit": "Enviar mensagem"
+  },
+  "Footer": {
+    "p": "Feito com ❤️ por Ícaro Cedraz",
+    "copyToClipboard": "Copiado para a área de transferência",
+    "footerItems":  {
+      "home": "Início",
+      "aboutMe": "Sobre mim",
+      "journey": "Jornada",
+      "projects": "Projetos",
+      "contactMe": "Contate me"
+    },
+    "footerSocialLinks": {
+      "repository": "Repositório"
+    },
+    "rightsReserved": "Todos os direitos reservados."
   }
 }

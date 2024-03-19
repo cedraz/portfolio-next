@@ -17,7 +17,7 @@ import { useTranslations } from "next-intl"
 export default function ButtonGroup({ direction }: ButtonGroupProps) {
     const router = useRouter()
     const handleClick = (link: string) => {
-        router.push(`/${link}`)
+        router.push(`${link}`)
     }
     const t = useTranslations("Navbar")
 

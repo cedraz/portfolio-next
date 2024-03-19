@@ -42,7 +42,7 @@ export default function Card(project: projectDataInterface) {
             <GlowingImage image={project.image} alt={project.title} />
             <div className="p-6 flex flex-col h-full">
                 <h5 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
-                <Badge className="w-fit">
+                <Badge className="w-fit hover:disabled">
                     {project.category}
                 </Badge>
                 <p className="text-justify font-normal text-gray-400 mt-4">{project.description}</p>

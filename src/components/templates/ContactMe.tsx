@@ -13,14 +13,18 @@ import {
 import Title from "../atoms/Title"
 import { ContactCard } from "../organisms/ContactCard"
 
+// next intl
+import { useTranslations } from "next-intl"
+
 export function ContactMe() {
+    const t = useTranslations("ContactMe")
 
     return (
         <section id="contact">
             <div className="grid mx-auto max-w-7xl px-6 py-8 lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
                 <div className="col-span-12 place-self-center">
                     <Title withMargin={true}>
-                        Contact me
+                        {t("h1")}
                     </Title>
                 </div>
                 <div className="hidden lg:mt-0 lg:col-span-6 lg:flex max-w-[500px] h-fit">

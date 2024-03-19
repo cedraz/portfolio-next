@@ -4,15 +4,22 @@ import * as React from "react"
 // Components
 import GlowingText from "@/components/organisms/GlowingText"
 import FooterItems from "../organisms/FooterItems"
+import { FooterSocialLinks } from "../organisms/FooterSocialLinks"
 
-const links = [
-    { href: "#", title: "Home" },
-    { href: "#", title: "About me" },
-    { href: "#", title: "Projects" },
-    { href: "#", title: "Contact me" },
-]
+// next intl
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+    const t = useTranslations("Footer")
+
+    const links = [
+        { href: "#", title: t("footerItems.home") },
+        { href: "#about", title: t("footerItems.aboutMe") },
+        { href: "#journey", title: t("footerItems.journey") },
+        { href: "#projects", title: t("footerItems.projects") },
+        { href: "#contact", title: t("footerItems.contactMe") },
+    ]
+
     return (
         <footer className="bg-background-secondary shadow">
             <div className="w-full max-w-7xl mx-auto px-6 p-4 md:py-8">
@@ -21,9 +28,14 @@ export function Footer() {
                         <GlowingText />
                     </a>
                     <FooterItems links={links}/>
+                    <FooterSocialLinks />
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://github.com/cedraz" className="underline hover:text-white">Cedraz</a>. All Rights Reserved.</span>
+                <span className="text-center md:text-left block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                    © 2023 <a href="https://github.com/cedraz" target="_blank" rel="noreferrer" className="underline hover:text-white">
+                        Cedraz
+                    </a>. {t("rightsReserved")}
+                </span>
             </div>
         </footer>
     )

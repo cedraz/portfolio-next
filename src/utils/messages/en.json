@@ -1,69 +1,182 @@
 {
-    "Navbar": {
-      "aboutMe": "About me",
-      "journey": "Journey",
-      "projects": "Projects",
-      "contactMe": "Contact me"
+  "Navbar": {
+    "aboutMe": "Sobre mim",
+    "journey": "Jornada",
+    "projects": "Projetos",
+    "contactMe": "Contate me"
+  },
+  "Hero": {
+    "h1": "Olá, meu nome é Ícaro Cedraz e eu sou",
+    "typingAnimation": {
+      "1": "Desenvolvedor Full Stack",
+      "2": "Desenvolvedor Frontend",
+      "3": "Desenvolvedor Backend"
     },
-    "Hero": {
-      "h1": "My name is Ícaro Cedraz and I'm a",
-      "typingAnimation": {
-        "1": "Full Stack Developer",
-        "2": "Frontend Developer",
-        "3": "Backend Developer"
+    "button": "Contate me"
+  },
+  "AboutMe": {
+    "h1": "Sobre mim",
+    "card": {
+      "li1": {
+        "h2": "Experiência",
+        "p": "1+ anos"
       },
-      "button": "Contact me"
-    },
-    "AboutMe": {
-      "h1": "About me",
-      "p": "I'm a full stack developer, with a focus on backend development. I'm passionate about technology and I'm always looking for new challenges and opportunities to learn and grow."
-    },
-    "Journey": {
-      "title": "Jornada",
-      "timeline1": {
-        "title": "Experiência",
-        "1": {
-          "time": "Janeiro de 2024 - Atualmente",
-          "title": "Gerente de backend na TITAN ci",
-          "p": "Como gerente de backend, assumi um cargo de lideração que me auxiliou imensamente na minha carreira. Na gerência adiquiri ampla experiência no desenvolvimento de APIs REST, utilizando Node.js, Typescript, Prisma ORM, Postgresql, Docker, Swagger para documentação, Zod para validações e Jest para criação de testes. Como líder da gerência de backend fiquei responsável por capacitar os membros envolvidos quanto ao SCRUM, lógica de programação e desenvolvimento de APIs utilizando as tecnologias mencionadas."
-        },
-        "2": {
-          "time": "Setembro de 2023 - Janeiro de 2024",
-          "title": "Desenvolvedor Full stack na TITAN ci",
-          "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia.",
-          "lis": [
-            "Javascript",
-            "Strapi",
-            "HTML e CSS",
-            "Bootstrap"
-          ]
-        },
-        "3": {
-          "time": "Maio de 2023 - Setembro de 2023",
-          "title": "Trainee na diretoria de Desenvolvimento na TITAN ci",
-          "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia."
-        }
+      "li2": {
+        "h2": "Completo",
+        "p": "13+ projetos"
       },
-      "timeline2": {
-        "title": "Educação",
-        "1": {
-          "time": "January 2024 - Present",
-          "title": "Backend Manager at TITAN ci",
-          "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia.",
-          "lis": [
-            "Resolução de problemas em Python",
-            "Resolução de problemas em C++",
-            "Programação orientada a objetos",
-            "Programação dinâmica",
-            "Cálculo",
-            "Física experimental e Teórica",
-            "Álgebra linear"
-          ]
-        },
-        "2": {
-          "time": "September 2023 - January 2024",
-          "title": "Full stack developer at TITAN ci"
-        }
+      "li3": {
+        "h2": "Pull Requests",
+        "p": "50+ pull requests"
+      },
+      "p": "Atuo como desenvolvedor Full Stack na TITAN ci, onde sou responsável por askgasko asgklblk",
+      "button": "Currículo"
+    }
+  },
+  "Journey": {
+    "title": "Jornada",
+    "timeline1": {
+      "title": "Experiência",
+      "1": {
+        "time": "Janeiro de 2024 - Atualmente",
+        "title": "Gerente de backend na TITAN ci",
+        "p": "Como gerente de backend, assumi um cargo de lideração que me auxiliou imensamente na minha carreira. Na gerência adiquiri ampla experiência no desenvolvimento de APIs REST, utilizando Node.js, Typescript, Prisma ORM, Postgresql, Docker, Swagger para documentação, Zod para validações e Jest para criação de testes. Como líder da gerência de backend fiquei responsável por capacitar os membros envolvidos quanto ao SCRUM, lógica de programação e desenvolvimento de APIs utilizando as tecnologias mencionadas."
+      },
+      "2": {
+        "time": "Setembro de 2023 - Janeiro de 2024",
+        "title": "Desenvolvedor Full stack na TITAN ci",
+        "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia.",
+        "lis": [
+          "Javascript",
+          "Strapi",
+          "HTML e CSS",
+          "Bootstrap"
+        ]
+      },
+      "3": {
+        "time": "Maio de 2023 - Setembro de 2023",
+        "title": "Trainee na diretoria de Desenvolvimento na TITAN ci",
+        "p": "I started my journey as a developer in 2018, when I started my degree in Computer Science at the Federal University of Bahia."
+      }
+    },
+    "timeline2": {
+      "title": "Educação",
+      "1": {
+        "time": "Agosto de 2022 - Atualmente",
+        "title": "Engenharia da Computação na UFBA",
+        "p": "Cursando Engenharia da Computação na UFBA (Universidade Federal da Bahia) eu tive aprendi muito sobre a teoria de diversos processos e pude conhecer mais sobre a área de computação e como certas coisas funcionam no mundo (numa perspectiva física). Dentre os conhecimentos adiquiridos, vale destacar:",
+        "lis": [
+          "Resolução de problemas em Python",
+          "Resolução de problemas em C++",
+          "Programação orientada a objetos",
+          "Programação dinâmica",
+          "Cálculo",
+          "Física experimental e Teórica",
+          "Álgebra linear"
+        ]
+      },
+      "2": {
+        "time": "Janeiro de 2019 - Dezembro de 2022",
+        "title": "Ensino médio no Colégio Oficina"
       }
     }
+  },
+  "Projects": {
+    "h1": "Projetos",
+    "all": "todos",
+    "buttonShowMore": "Mostras mais",
+    "buttonShowLess": "Mostras menos",
+    "1": {
+      "title": "Gerenciador de despesas Frontend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "2": {
+      "title": "Gerenciador de despesas Backend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "3": {
+      "title": "Portfólio de locuções",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "4": {
+      "title": "Desafio Backend Picpay",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "5": {
+      "title": "Desafio PTDEV Frontend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "6": {
+      "title": "Desafio PTDEV Backend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "7": {
+      "title": "Desafio Fullstack Redway Frontend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "8": {
+      "title": "Desafio Fullstack Redway Backend",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "9": {
+      "title": "Desafio VFlows",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    },
+    "10": {
+      "title": "Portfólio Next",
+      "description": "Gerenciador de despesas e cobranças para auxiliar na vida financeira."
+    }
+  },
+  "ContactMe": {
+    "h1": "Contate me",
+    "card": {
+      "title": "Deseja me enviar uma mensagem?",
+      "description": "Preencha os campos abaixo e me envie uma mensagem. Ficarei feliz em te responder!"
+    },
+    "name": {
+      "label": "Nome",
+      "placeholder": "Digite seu nome",
+      "errorMinCharacters": "Nome deve ter no mínimo 3 caracteres.",
+      "errorMaxCharacters": "Nome deve ter no máximo 40 caracteres."
+    },
+    "category": {
+      "label": "Categoria",
+      "placeholder": "Selecione uma categoria",
+      "description": "Qual o objetivo da sua mensagem?",
+      "options": {
+        "1": "Oportunidade de trabalho",
+        "2": "Parceria",
+        "3": "Outro"
+      },
+      "errorRequired": "Selecione uma categoria."
+    },
+    "email": {
+      "label": "Email",
+      "errorRequired": "Campo de email é obrigatório.",
+      "errorInvalidEmail": "Digite um email válido."
+    },
+    "message": {
+      "label": "Mensagem",
+      "placeholder": "Digite sua mensagem",
+      "description": "O que você deseja me comunicar?",
+      "errorRequired": "Campo de mensagem é obrigatório.",
+      "errorMinCharacters": "Mensagem deve ter no mínimo 5 caracteres."
+    },
+    "submit": "Enviar mensagem"
+  },
+  "Footer": {
+    "p": "Feito com ❤️ por Ícaro Cedraz",
+    "copyToClipboard": "Copiado para a área de transferência",
+    "footerItems":  {
+      "home": "Início",
+      "aboutMe": "Sobre mim",
+      "journey": "Jornada",
+      "projects": "Projetos",
+      "contactMe": "Contate me"
+    },
+    "footerSocialLinks": {
+      "repository": "Repositório"
+    },
+    "rightsReserved": "Todos os direitos reservados."
+  }
 }

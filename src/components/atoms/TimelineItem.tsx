@@ -7,8 +7,6 @@ export type TimelineItemProps = {
     children: React.ReactNode
 }
 
-// ${order === "initial" ? "bg-black" : "bg-white "}
-
 export function TimelineItem({ order, time, title, children} : TimelineItemProps) {
     return (
         <li className={`${order === "initial" ? "mb-0" : "mb-6"} ms-4`}>
