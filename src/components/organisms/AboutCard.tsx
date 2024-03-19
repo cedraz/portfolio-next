@@ -3,7 +3,7 @@ import Link from "next/link"
 
 // Components
 import { Button } from "../ui/button"
-import { Card, CardHeader, CardContent, CardFooter } from "../ui/card"
+import { Card, CardContent, CardFooter } from "../ui/card"
 import { Check } from "@phosphor-icons/react"
 
 // next intl
