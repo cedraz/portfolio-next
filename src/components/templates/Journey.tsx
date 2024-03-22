@@ -14,7 +14,7 @@ export function Journey() {
                 <Title withMargin={true}>
                     {t("title")}
                 </Title>
-                <div className="flex flex-col gap-16 md:flex-row justify-between md:gap-5">
+                <div className="flex flex-col gap-16 justify-between md:gap-5">
                     <div className="flex flex-col items-center flex-1">
                         <h1 className="text-2xl mb-4">{t("timeline1.title")}</h1>
                         <Experience />

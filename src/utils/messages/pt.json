@@ -128,7 +128,7 @@
     }
   },
   "ContactMe": {
-    "h1": "Contate me",
+    "h1": "Entre em contato",
     "card": {
       "title": "Deseja me enviar uma mensagem?",
       "description": "Preencha os campos abaixo e me envie uma mensagem. Ficarei feliz em te responder!"
@@ -145,7 +145,7 @@
       "description": "Qual o objetivo da sua mensagem?",
       "options": {
         "1": "Oportunidade de trabalho",
-        "2": "Parceria",
+        "2": "Freelance",
         "3": "Outro"
       },
       "errorRequired": "Selecione uma categoria."
