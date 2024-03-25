@@ -5,8 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { notFound } from "next/navigation"
 import { NextIntlClientProvider, useMessages } from "next-intl"
+import { Metadata } from "next"
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Cedraz",
     description: "Icaro Cedraz's portfolio",
 }
