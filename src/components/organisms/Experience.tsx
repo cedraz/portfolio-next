@@ -26,10 +26,13 @@ const Data2 = () => {
 
     return (
         <div className="flex flex-col mt-5">
-            <div className="rounded-xl overflow-hidden">
+            <div className="overflow-hidden">
                 <Image 
                     src={TITAN}
                     alt="TITAN logo"
+                    style={{
+                        borderRadius: "0.75rem"
+                    }}
                 />
             </div>
             <div className="flex flex-col gap-3">
