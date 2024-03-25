@@ -13,6 +13,10 @@ import { projectDataInterface } from "../../@types/interfaces"
 // next intl
 import { useTranslations } from "next-intl"
 
+// AOS
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 export function Projects() {
     const t = useTranslations("Projects")
 
@@ -28,6 +32,15 @@ export function Projects() {
     const projectsDataObject = projectsObject()
     const projectsData = projectsDataObject.projects
     const projectsCategories = projectsDataObject.projectsCategories
+
+    React.useEffect(() => {
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: false,
+            mirror: false
+        })
+    }, [])
 
     React.useEffect(() => {
         const filteredProjects = category === t("all")
@@ -66,7 +79,7 @@ export function Projects() {
                 <Title withMargin={true}>
                     { t("h1")}
                 </Title>
-                <div className="flex flex-row flex-wrap gap-3 items-center justify-center">
+                <div className="flex flex-row flex-wrap gap-3 items-center justify-center" data-aos="fade-up">
                     {projectsCategories.map((category, index) => (
                         <Button
                             key={index}

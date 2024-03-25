@@ -7,12 +7,25 @@ import ProfilePic from "@/assets/ProfilePic.png"
 // Components
 import Title from "../atoms/Title"
 import { AboutCard } from "../organisms/AboutCard"
-import { useTranslations } from "next-intl"
 
 // next intl
+import { useTranslations } from "next-intl"
+
+// AOS
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export function About() {
     const t = useTranslations("AboutMe")
+
+    React.useEffect(() => {
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: false,
+            mirror: false
+        })
+    }, [])
 
     return (
         <section className="bg-background-secondary" id="about">
@@ -22,10 +35,10 @@ export function About() {
                         {t("h1")}
                     </Title>
                 </div>
-                <div className="hidden lg:mt-0 lg:col-span-6 align-self-center lg:flex max-w-[500px] h-fit">
+                <div className="hidden lg:mt-0 lg:col-span-6 align-self-center lg:flex max-w-[500px] h-fit" data-aos="fade-right">
                     <Image src={ProfilePic} alt="contact-me"/>
                 </div>
-                <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6">
+                <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6" data-aos="fade-left">
                     <AboutCard />
                 </div>
             </div>
