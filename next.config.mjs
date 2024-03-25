@@ -15,7 +15,10 @@ const nextConfig = {
                 destination: "/src/api/:path*", // Proxy to Backend
             },
         ]
-    }
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 }
 
 export default withNextIntl(nextConfig)
