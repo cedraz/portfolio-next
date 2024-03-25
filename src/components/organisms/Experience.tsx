@@ -19,7 +19,6 @@ const Data1 = () => {
             </p>
         </div>
     )
-    
 }
 
 const Data2 = () => {
@@ -37,8 +36,8 @@ const Data2 = () => {
                 <p className="mt-3">
                     {t("2.p")}
                 </p>
-                <Button className="w-fit mt-3">
-                    Linkedin
+                <Button className="w-fit mt-3" asChild>
+                    <a href="https://www.linkedin.com/in/cedraz/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                 </Button>
             </div>
         </div>

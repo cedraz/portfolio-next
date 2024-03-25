@@ -16,49 +16,52 @@ import { useTranslations } from "next-intl"
 export function Projects() {
     const t = useTranslations("Projects")
 
-    const [ projects, setProjects ] = React.useState<projectDataInterface[]>([])
+    const sectionRef = React.useRef(null)
+
+    const [ activeProjects, setActiveProjects] = React.useState<projectDataInterface[]>([])
     const [ active, setActive ] = React.useState(0)
-    const [ category, setCategory ] = React.useState("all")
+    const [ category, setCategory ] = React.useState(t("all"))
     const [ showAll, setShowAll ] = React.useState(false)
     const [ projectsNumber, setProjectsNumber ] = React.useState(0)
+    const [ projectsTotalNumber, setProjectsTotalNumber ] = React.useState(0)
 
     const projectsDataObject = projectsObject()
     const projectsData = projectsDataObject.projects
     const projectsCategories = projectsDataObject.projectsCategories
 
     React.useEffect(() => {
-        if (category === "all") {
-            if (showAll) {
-                setProjects(projectsData)
-                setProjectsNumber(projectsData.length)
-            } else {
-                setProjects(projectsData.slice(0, 3))
-                setProjectsNumber(3)
-            }
+        const filteredProjects = category === t("all")
+            ? projectsData 
+            : projectsData.filter(project => project.category === category)
 
-        } else {
-            const filteredProjects = projectsData.filter((project: projectDataInterface) => {
-                return project.category === category
-            })
+        const projectsToShow = showAll ? filteredProjects : filteredProjects.slice(0, 3)
 
-            if (showAll) {
-                setProjects(filteredProjects)
-                setProjectsNumber(filteredProjects.length)
-            } else {
-                setProjects(filteredProjects.slice(0, 3))
-                setProjectsNumber(3)
-            }
-        }
+        setActiveProjects(projectsToShow)
+        setProjectsNumber(projectsToShow.length)
+        setProjectsTotalNumber(filteredProjects.length)
     }, [category, showAll])
 
     const handleClickCategory = ({ index, category }: { index: number, category: string }) => {
         setActive(index)
         setCategory(category)
-        setShowAll(false)
+    }
+
+    const handleChangeShowAll = () => {
+        setShowAll(!showAll)
+
+        if (showAll) {
+            if (sectionRef.current) {
+                const sectionOffsetTop = (sectionRef.current as HTMLElement).offsetTop
+                window.scrollTo({
+                    top: sectionOffsetTop,
+                    behavior: "smooth"
+                })
+            }
+        }
     }
 
     return (
-        <section className="bg-background-secondary h-full" id="projects">
+        <section ref={sectionRef} className="bg-background-secondary h-full" id="projects">
             <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center">
                 <Title withMargin={true}>
                     { t("h1")}
@@ -71,13 +74,13 @@ export function Projects() {
                             onClick={() => handleClickCategory({ index, category })}
                         >
                             {category}
-                            {active === index ? (" " + projectsNumber + "/" + projectsData.length) : "" }
+                            {active === index ? (" " + projectsNumber + "/" + projectsTotalNumber) : "" }
                         </Button>
                     ))}
                 </div>
-                <ProjectsCardsGroup projects={projects} />
+                <ProjectsCardsGroup projects={activeProjects} />
                 <Button 
-                    onClick={() => setShowAll(!showAll)}
+                    onClick={handleChangeShowAll}
                     variant="default" 
                     style={{marginTop: "30px"}}
                 >

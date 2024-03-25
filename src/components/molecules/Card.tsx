@@ -69,7 +69,7 @@ export default function Card(project: projectDataInterface) {
                                 target="_blank" rel="noreferrer"
                                 className={buttonVariants({variant: "default"})}
                             >
-                                    Link
+                                Link
                                 <Link className="ml-2" size={22} />
                             </a>
                         )

@@ -21,7 +21,7 @@ export function projectsObject() {
             image: ExpenseManager,
             link: "https://gerenciadordedespesas.vercel.app/",
             repository: "https://github.com/cedraz/expense-manager-front",
-            tags: ["next.js", "react", "typescript", "material-ui", "axios", "react-hook-form", "toastify"]
+            tags: ["next.js", "react", "typescript", "material ui", "axios", "react-hook-form", "toastify", "vercel"]
         },
         {
             id: 2,
@@ -29,9 +29,9 @@ export function projectsObject() {
             description: t("2.description"),
             category: "backend",
             image: ExpenseManager,
-            link: "",
+            link: "https://gerenciadordedespesas.vercel.app/",
             repository: "https://github.com/cedraz/expense-manager-back",
-            tags: ["node", "typescript", "fastify", "docker", "prisma orm", "postgresql"]
+            tags: ["node", "typescript", "aws ec2", "aws rds", "fastify", "docker", "prisma orm", "postgresql"]
         },
         {
             id: 3,
@@ -41,7 +41,7 @@ export function projectsObject() {
             image: VoiceoverPortfolio,
             link: "https://locutorageovana.vercel.app/",
             repository: "https://github.com/cedraz/voiceover-portfolio",
-            tags: ["next.js", "react", "typescript", "material-ui", "swiper", "emailjs"]
+            tags: ["next.js", "react", "typescript", "material ui", "swiper", "emailjs", "vercel"]
         },
         {
             id: 4,
@@ -61,7 +61,7 @@ export function projectsObject() {
             image: AxeNoticias,
             link: "https://axenoticias.vercel.app/",
             repository: "https://github.com/cedraz/desafio-ptdev-front",
-            tags: ["html", "css", "javascript"]
+            tags: ["html", "css", "javascript", "vercel"]
         },
         {
             id: 6,
@@ -69,7 +69,7 @@ export function projectsObject() {
             description: t("6.description"),
             category: "backend",
             image: AxeNoticias,
-            link: "",
+            link: "https://axenoticias.vercel.app/",
             repository: "https://github.com/cedraz/desafio-ptdev-back",
             tags: ["strapi", "javascript", "postgresql", "cloudnary", "neondb"]
         },
@@ -90,8 +90,8 @@ export function projectsObject() {
             category: "backend",
             image: ProjectImage,
             link: "",
-            repository: "https://github.com/cedraz/desafio-fullstack-redway-frontend",
-            tags: ["next.js", "typescript", "fastify", "docker compose", "postgresql", "prisma orm", "swagger", "zod"]
+            repository: "https://github.com/cedraz/desafio-fullstack-redway-backend",
+            tags: ["next.js", "typescript", "fastify", "docker", "docker compose", "postgresql", "prisma orm", "swagger", "zod"]
         },
         {
             id: 9,
@@ -107,12 +107,52 @@ export function projectsObject() {
             id: 10,
             title: t("10.title"),
             description: t("10.description"),
+            category: "frontend",
+            image: ProjectImage,
+            link: "",
+            repository: "https://github.com/cedraz/portfolio-next",
+            tags: ["next.js", "react", "typescript", "atomic design", "shadcn ui", "tailwind css", "phosphor icons", "axios", "nodemailer"]
+        },
+        {
+            id: 11,
+            title: t("11.title"),
+            description: t("11.description"),
+            category: "frontend",
+            image: ProjectImage,
+            link: "",
+            repository: "https://github.com/cedraz/desafio-coorlab-fullstack/tree/main/app/frontend",
+            tags: ["vue.js", "javascript", "tailwind css", "axios", "vite", "phosphor icons"]
+        },
+        {
+            id: 12,
+            title: t("12.title"),
+            description: t("12.description"),
             category: "backend",
             image: ProjectImage,
             link: "",
-            repository: "",
-            tags: ["next.js", "react", "typescript", "atomic design", "tailwind css", "axios", "nodemailer"]
-        }
+            repository: "https://github.com/cedraz/desafio-coorlab-fullstack/tree/main/app/backend",
+            tags: ["python", "fast api", "swagger"]
+        },
+        {
+            id: 13,
+            title: t("13.title"),
+            description: t("13.description"),
+            category: "frontend",
+            image: ProjectImage,
+            link: "",
+            repository: "https://github.com/cedraz/desafio-lesser-frontend",
+            tags: ["svelte", "svetekit", "typescript", "vite", "adapter-static", "tailwind css", "daisy ui", "frontend tests", "playwright"]
+        },
+        {
+            id: 14,
+            title: t("14.title"),
+            description: t("14.description"),
+            category: "backend",
+            image: ProjectImage,
+            link: "",
+            repository: "https://github.com/cedraz/rinha-de-backend-2024-q1-nestjs",
+            tags: ["nest.js", "typescript", "postgresql", "prisma orm", "zod", "docker", "docker compose", "nginx", "loadbalancer"]
+        },
     ]
 
     return {

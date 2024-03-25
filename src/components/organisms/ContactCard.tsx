@@ -27,9 +27,6 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 import { Input } from "../ui/input"
 import { toast } from "../ui/use-toast"
 
-// Resend
-import { SEND } from "@/app/api/send/route"
-
 // next intl
 import { useTranslations } from "next-intl"
 
@@ -85,7 +82,23 @@ export function ContactCard({ deliveryMethod }: ContactCardProps) {
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
         if (deliveryMethod === "email") {
-            await SEND({...data})
+            try {
+                await fetch("/api/sendEmail", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+            } catch (error) {
+                console.error(error)
+                toast({
+                    title: "Error",
+                    description: "An error occurred while sending the email",
+                    duration: 5000,
+                })
+                return
+            }
 
             let message = data.message
 
@@ -139,9 +152,9 @@ ${data.message}
                                 name="name"
                                 render={({ field }) => (
                                     <FormItem className="flex-grow w-full">
-                                        <FormLabel>Name</FormLabel>
+                                        <FormLabel>{t("name.label")}</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="Name" {...field} />
+                                            <Input placeholder={t("name.placeholder")} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
