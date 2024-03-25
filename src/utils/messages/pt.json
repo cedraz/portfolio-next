@@ -1,0 +1,191 @@
+{
+  "Navbar": {
+    "aboutMe": "Sobre mim",
+    "journey": "Jornada",
+    "projects": "Projetos",
+    "contactMe": "Entre em contato"
+  },
+  "Hero": {
+    "h1": "Olá, meu nome é Ícaro Cedraz e eu sou",
+    "typingAnimation": {
+      "1": "Desenvolvedor Full Stack",
+      "2": "Desenvolvedor Frontend",
+      "3": "Desenvolvedor Backend"
+    },
+    "button": "Entre em contato"
+  },
+  "AboutMe": {
+    "h1": "Sobre mim",
+    "card": {
+      "li1": {
+        "h2": "Experiência",
+        "p": "1+ anos"
+      },
+      "li2": {
+        "h2": "Completo",
+        "p": "13+ projetos"
+      },
+      "li3": {
+        "h2": "Pull Requests",
+        "p": "50+ pull requests"
+      },
+      "p": "Olá, me chamo Ícaro Cedraz, tenho 20 anos e comecei a estudar programação aos 17 anos, fiz alguns cursos e sempre foquei em desenvolver projetos. Ao entrar no curso de Engenharia da Computação na UFBA (Universidade federal da Bahia) onde ingressei na empresa júnior de computação TITAN eu pude atuar no mercado desenvolvendo aplicações tanto front-end quanto back-end, trabalhando com typescript, com maior foco no back-end. O que me destaca não é apenas minha proficiência técnica, mas também minha paixão por ficar atualizado nas tendências do mercado e adotar as melhores práticas para fornecer resultados ideais.",
+      "button": "Currículo"
+    }
+  },
+  "Journey": {
+    "title": "Jornada",
+    "timeline1": {
+      "title": "Experiência",
+      "1": {
+        "time": "Janeiro de 2024 - Atualmente",
+        "title": "Gerente de backend na TITAN ci",
+        "p": "Como gerente de backend, assumi um cargo de lideração que me auxiliou imensamente na minha carreira. Na gerência adiquiri ampla experiência no desenvolvimento de APIs REST, utilizando Node.js, Typescript, Prisma ORM, Postgresql, Docker, Swagger para documentação, Zod para validações e Jest para criação de testes. Como líder da gerência de backend fiquei responsável por capacitar os membros envolvidos quanto ao SCRUM, lógica de programação e desenvolvimento de APIs utilizando as tecnologias mencionadas."
+      },
+      "2": {
+        "time": "Setembro de 2023 - Janeiro de 2024",
+        "title": "Desenvolvedor Full stack na TITAN ci",
+        "p": "Como desenvolvedor full stack, fiquei responsável por desenvolver aplicações web completas, desde o front-end até o back-end. Utilizei diversas tecnologias, dentre elas: Typescript, Node.js, React, Next.js, Prisma ORM, Postgresql, Docker, Swagger, Zod e Jest."
+      },
+      "3": {
+        "time": "Maio de 2023 - Setembro de 2023",
+        "title": "Trainee na diretoria de Desenvolvimento na TITAN ci"
+      }
+    },
+    "timeline2": {
+      "title": "Educação",
+      "1": {
+        "time": "Agosto de 2022 - Atualmente",
+        "title": "Engenharia da Computação na UFBA",
+        "p": "Cursando Engenharia da Computação na UFBA (Universidade Federal da Bahia) eu tive aprendi muito sobre a teoria de diversos processos e pude conhecer mais sobre a área de computação e como certas coisas funcionam no mundo (numa perspectiva física). Dentre os conhecimentos adiquiridos, vale destacar:",
+        "lis": [
+          "Resolução de problemas em Python",
+          "Resolução de problemas em C++",
+          "Programação orientada a objetos",
+          "Programação dinâmica",
+          "Cálculo",
+          "Física experimental e Teórica",
+          "Álgebra linear"
+        ]
+      },
+      "2": {
+        "time": "Janeiro de 2019 - Dezembro de 2022",
+        "title": "Ensino médio no Colégio Oficina"
+      }
+    }
+  },
+  "Projects": {
+    "h1": "Projetos",
+    "all": "todos",
+    "buttonShowMore": "Mostras mais",
+    "buttonShowLess": "Mostras menos",
+    "1": {
+      "title": "Gerenciador de despesas Frontend",
+      "description": "Frontend de um gerenciador de despesas e cobranças para auxiliar na vida financeira"
+    },
+    "2": {
+      "title": "Gerenciador de despesas Backend",
+      "description": "Servidor do gerenciador de despesas e cobranças."
+    },
+    "3": {
+      "title": "Portfólio de locuções",
+      "description": "Site para divulgação de locuções e narrações."
+    },
+    "4": {
+      "title": "Desafio Backend Picpay",
+      "description": "Minha resolução do desafio para vaga backend na Picpay"
+    },
+    "5": {
+      "title": "Desafio PTDEV Frontend",
+      "description": "Frontend da resolução da minha equipe pro desafio do Processo Trainee de DEV na TITAN ci"
+    },
+    "6": {
+      "title": "Desafio PTDEV Backend",
+      "description": "Backend da resolução da minha equipe pro desafio do Processo Trainee de DEV na TITAN ci"
+    },
+    "7": {
+      "title": "Desafio Fullstack Redway Frontend",
+      "description": "Frontend da minha resolução do desafio para vaga fullstack na Redway"
+    },
+    "8": {
+      "title": "Desafio Fullstack Redway Backend",
+      "description": "Backend da minha resolução do desafio para vaga fullstack na Redway"
+    },
+    "9": {
+      "title": "Desafio VFlows",
+      "description": "Minha resolução do desafio para vaga frontend na VFlows"
+    },
+    "10": {
+      "title": "Portfólio Next",
+      "description": "Meu atual portfólio feito em Next.js"
+    },
+    "11": {
+      "title": "Desafio Fullstack Coorlab Frontend",
+      "description": "Frontend da minha resolução do desafio para vaga fullstack na Coorlab"
+    },
+    "12": {
+      "title": "Desafio Fullstack Coorlab Backend",
+      "description": "Backend da minha resolução do desafio para vaga fullstack na Coorlab"
+    },
+    "13": {
+      "title": "Desafio Frontend Lesser",
+      "description": "Minha resolução do desafio para vaga frontend na Lesser"
+    },
+    "14": {
+      "title": "Rinha de backend 2024 q1",
+      "description": "Minha resolução da questão 1 da rinha de backend de 2024"
+    }
+  },
+  "ContactMe": {
+    "h1": "Entre em contato",
+    "card": {
+      "title": "Deseja me enviar uma mensagem?",
+      "description": "Preencha os campos abaixo e me envie uma mensagem. Ficarei feliz em te responder!"
+    },
+    "name": {
+      "label": "Nome",
+      "placeholder": "Digite seu nome",
+      "errorMinCharacters": "Nome deve ter no mínimo 3 caracteres.",
+      "errorMaxCharacters": "Nome deve ter no máximo 40 caracteres."
+    },
+    "category": {
+      "label": "Categoria",
+      "placeholder": "Selecione uma categoria",
+      "description": "Qual o objetivo da sua mensagem?",
+      "options": {
+        "1": "Oportunidade de trabalho",
+        "2": "Freelance",
+        "3": "Outro"
+      },
+      "errorRequired": "Selecione uma categoria."
+    },
+    "email": {
+      "label": "Email",
+      "errorRequired": "Campo de email é obrigatório.",
+      "errorInvalidEmail": "Digite um email válido."
+    },
+    "message": {
+      "label": "Mensagem",
+      "placeholder": "Digite sua mensagem",
+      "description": "O que você deseja me comunicar?",
+      "errorRequired": "Campo de mensagem é obrigatório.",
+      "errorMinCharacters": "Mensagem deve ter no mínimo 5 caracteres."
+    },
+    "submit": "Enviar mensagem"
+  },
+  "Footer": {
+    "p": "Feito com ❤️ por Ícaro Cedraz",
+    "copyToClipboard": "Copiado para a área de transferência",
+    "footerItems":  {
+      "home": "Início",
+      "aboutMe": "Sobre mim",
+      "journey": "Jornada",
+      "projects": "Projetos",
+      "contactMe": "Entre em contato"
+    },
+    "footerSocialLinks": {
+      "repository": "Repositório"
+    },
+    "rightsReserved": "Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "Navbar": {
+    "aboutMe": "About me",
+    "journey": "Journey",
+    "projects": "Projects",
+    "contactMe": "Contact me"
+  },
+  "Hero": {
+    "h1": "Hi, my name is Ícaro Cedraz and I'm a",
+    "typingAnimation": {
+      "1": "Full Stack Developer",
+      "2": "Frontend Developer",
+      "3": "Backend Developer"
+    },
+    "button": "Contact me"
+  },
+  "AboutMe": {
+    "h1": "About me",
+    "card": {
+      "li1": {
+        "h2": "Experience",
+        "p": "1+ years"
+      },
+      "li2": {
+        "h2": "Completed",
+        "p": "13+ projects"
+      },
+      "li3": {
+        "h2": "Pull Requests",
+        "p": "50+ pull requests"
+      },
+      "p": "Hello, my name is Ícaro Cedraz, I'm 20 years old, and I started studying programming at the age of 17. I've taken some courses and have always focused on developing projects. Upon entering the Computer Engineering program at UFBA (Federal University of Bahia), where I joined the junior computing company TITAN, I was able to engage in the market by developing applications both on the front-end and back-end, working with TypeScript, with a greater focus on the back-end. What sets me apart is not only my technical proficiency but also my passion for staying updated on market trends and adopting best practices to deliver optimal results.",
+      "button": "Download CV"
+    }
+  },
+  "Journey": {
+    "title": "Journey",
+    "timeline1": {
+      "title": "Experience",
+      "1": {
+        "time": "January 2024 - Present",
+        "title": "Backend Manager at TITAN ci",
+        "p": "As a backend manager, I took on a leadership role that greatly assisted in my career growth. In this role, I gained extensive experience in developing RESTful APIs using Node.js, TypeScript, Prisma ORM, PostgreSQL, Docker, Swagger for documentation, Zod for validations, and Jest for test creation. As the leader of the backend team, I was responsible for training team members in SCRUM methodologies, programming logic, and API development using the mentioned technologies."
+      },
+      "2": {
+        "time": "September 2023 - January 2024",
+        "title": "Full Stack Developer at TITAN ci",
+        "p": "As a full-stack developer, I was responsible for developing complete web applications, spanning from the front-end to the back-end. I utilized various technologies, including TypeScript, Node.js, React, Next.js, Prisma ORM, PostgreSQL, Docker, Swagger, Zod, and Jest."
+      },
+      "3": {
+        "time": "May 2023 - September 2023",
+        "title": "Trainee at the Development Directorate at TITAN ci"
+      }
+    },
+    "timeline2": {
+      "title": "Education",
+      "1": {
+        "time": "August 2022 - Present",
+        "title": "Computer Engineering at UFBA",
+        "p": "Studying Computer Engineering at UFBA (Federal University of Bahia), I've gained valuable insights into the theory behind various processes and expanded my understanding of the field of computing and how certain things function in the world from a physical perspective. Among the knowledge I've acquired, notable highlights include:",
+        "lis": [
+          "Problem-solving in Python",
+          "Problem-solving in C++",
+          "Object-oriented programming",
+          "Dynamic programming",
+          "Calculus",
+          "Experimental and Theoretical Physics",
+          "Linear Algebra"
+        ]
+      },
+      "2": {
+        "time": "January 2019 - December 2022",
+        "title": "High school at Colégio Oficina"
+      }
+    }
+  },
+  "Projects": {
+    "h1": "Projects",
+    "all": "all",
+    "buttonShowMore": "Show more",
+    "buttonShowLess": "Show less",
+    "1": {
+      "title": "Expense Manager Frontend",
+      "description": "Frontend of an expense and billing manager to assist in financial life."
+    },
+    "2": {
+      "title": "Expense Manager Backend",
+      "description": "Backend server of the expense and billing manager."
+    },
+    "3": {
+      "title": "Voiceover Portfolio",
+      "description": "Website for voiceover and narration promotion."
+    },
+    "4": {
+      "title": "Picpay Backend Challenge",
+      "description": "My resolution of the backend challenge for the Picpay position."
+    },
+    "5": {
+      "title": "PTDEV Frontend Challenge",
+      "description": "Frontend of my team's resolution for the Trainee DEV Process challenge at TITAN CI."
+    },
+    "6": {
+      "title": "PTDEV Backend Challenge",
+      "description": "Backend of my team's resolution for the Trainee DEV Process challenge at TITAN CI."
+    },
+    "7": {
+      "title": "Redway Fullstack Challenge Frontend",
+      "description": "Frontend of my resolution for the fullstack position challenge at Redway."
+    },
+    "8": {
+      "title": "Redway Fullstack Challenge Backend",
+      "description": "Backend of my resolution for the fullstack position challenge at Redway."
+    },
+    "9": {
+      "title": "VFlows Frontend Challenge",
+      "description": "My resolution of the frontend challenge for the VFlows position."
+    },
+    "10": {
+      "title": "Next Portfolio",
+      "description": "My current portfolio made in Next.js."
+    },
+    "11": {
+      "title": "Coorlab Fullstack Challenge Frontend",
+      "description": "Frontend of my resolution for the fullstack position challenge at Coorlab."
+    },
+    "12": {
+      "title": "Coorlab Fullstack Challenge Backend",
+      "description": "Backend of my resolution for the fullstack position challenge at Coorlab."
+    },
+    "13": {
+      "title": "Lesser Frontend Challenge",
+      "description": "My resolution of the frontend challenge for the Lesser position."
+    },
+    "14": {
+      "title": "Backend Rumble 2024 q1",
+      "description": "My resolution of question 1 of the 2024 backend rumble."
+    }
+  },
+  "ContactMe": {
+    "h1": "Contact me",
+    "card": {
+      "title": "Want to send me a message?",
+      "description": "Fill in the fields below and send me a message. I'll be happy to respond!"
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter your name",
+      "errorMinCharacters": "Name must have at least 3 characters.",
+      "errorMaxCharacters": "Name must have at most 40 characters."
+    },
+    "category": {
+      "label": "Category",
+      "placeholder": "Select a category",
+      "description": "What is the purpose of your message?",
+      "options": {
+        "1": "Job Opportunity",
+        "2": "Freelance",
+        "3": "Other"
+      },
+      "errorRequired": "Select a category."
+    },
+    "email": {
+      "label": "Email",
+      "errorRequired": "Email field is required.",
+      "errorInvalidEmail": "Enter a valid email."
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Enter your message",
+      "description": "What do you want to communicate to me?",
+      "errorRequired": "Message field is required.",
+      "errorMinCharacters": "Message must have at least 5 characters."
+    },
+    "submit": "Send message"
+  },
+  "Footer": {
+    "p": "Made with ❤️ by Ícaro Cedraz",
+    "copyToClipboard": "Copied to clipboard",
+    "footerItems": {
+      "home": "Home",
+      "aboutMe": "About me",
+      "journey": "Journey",
+      "projects": "Projects",
+      "contactMe": "Contact me"
+    },
+    "footerSocialLinks": {
+      "repository": "Repository"
+    },
+    "rightsReserved": "All rights reserved."
+  }
+}
