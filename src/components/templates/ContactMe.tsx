@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 
-import Iphone from "@/assets/iphone.png"
+// import Iphone from "@/assets/iphone.png"
 import macbook from "@/assets/macbook.png"
 
 // Components
