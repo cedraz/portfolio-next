@@ -18,14 +18,14 @@ import "aos/dist/aos.css"
 export function About() {
     const t = useTranslations("AboutMe")
 
-    React.useEffect(() => {
-        AOS.init({
-            duration: 800,
-            easing: "ease-in-out",
-            once: false,
-            mirror: false
-        })
-    }, [])
+    // React.useEffect(() => {
+    //     AOS.init({
+    //         duration: 800,
+    //         easing: "ease-in-out",
+    //         once: false,
+    //         mirror: false
+    //     })
+    // }, [])
 
     return (
         <section className="bg-background-secondary" id="about">
@@ -35,10 +35,10 @@ export function About() {
                         {t("h1")}
                     </Title>
                 </div>
-                <div className="hidden lg:mt-0 lg:col-span-6 align-self-center lg:flex max-w-[500px] h-fit" data-aos="fade-right">
+                <div className="hidden lg:mt-0 lg:col-span-6 align-self-center lg:flex max-w-[500px] h-fit" >
                     <Image src={ProfilePic} alt="contact-me"/>
                 </div>
-                <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6" data-aos="fade-left">
+                <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6" >
                     <AboutCard />
                 </div>
             </div>
