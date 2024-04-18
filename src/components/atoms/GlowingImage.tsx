@@ -47,8 +47,6 @@ export function GlowingImage({alt, image}: GlowingImageProps) {
             <Image
                 src={image}
                 alt={alt}
-                width={400}
-                height={300}
                 className="rounded-t-lg w-full"
             />
         </div>

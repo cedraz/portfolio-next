@@ -79,7 +79,7 @@ export function Projects() {
                 <Title withMargin={true}>
                     { t("h1")}
                 </Title>
-                <div className="flex flex-row flex-wrap gap-3 items-center justify-center" data-aos="fade-up">
+                <div className="flex flex-row flex-wrap gap-3 items-center justify-center">
                     {projectsCategories.map((category, index) => (
                         <Button
                             key={index}

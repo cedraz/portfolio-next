@@ -2,8 +2,8 @@
 import * as React from "react"
 import Image from "next/image"
 
-// import Iphone from "@/assets/iphone.png"
-import macbook from "@/assets/macbook.png"
+// Images
+import contactme from "@/assets/contact-me/contactme.png"
 
 // Components
 import {
@@ -25,14 +25,16 @@ import "aos/dist/aos.css"
 export function ContactMe() {
     const t = useTranslations("ContactMe")
 
-    // React.useEffect(() => {
-    //     AOS.init({
-    //         duration: 800,
-    //         easing: "ease-in-out",
-    //         once: false,
-    //         mirror: false
-    //     })
-    // })
+    React.useEffect(() => {
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: false,
+            mirror: false
+        })
+    })
+
+    //https://expense-manager-front.vercel.app/
 
     return (
         <section id="contact">
@@ -43,7 +45,9 @@ export function ContactMe() {
                     </Title>
                 </div>
                 <div className="hidden place-self-center lg:mt-0 lg:col-span-6 lg:flex max-w-[500px] h-fit" >
-                    <Image src={macbook} alt="contact-me"/>
+                    <a href="https://expense-manager-front.vercel.app/" target="_blank" rel="noreferrer" >
+                        <Image src={contactme} alt="contact-me"/>
+                    </a>
                 </div>
                 <div className="flex flex-col items-end justify-center col-span-12 lg:col-span-6 min-h-[736px]" >
                     <Tabs defaultValue="email" className="w-full teste:w-[550px]">

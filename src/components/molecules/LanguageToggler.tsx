@@ -1,3 +1,10 @@
+import { useRouter, usePathname } from "../../../navigation"
+import Image from "next/image"
+
+// Images
+import USAFlag from "@/assets/language-toggle/usa-flag.svg"
+import BrazilFlag from "@/assets/language-toggle/brazil-flag.svg"
+
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -6,7 +13,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Translate } from "@phosphor-icons/react"
 import { Button } from "../ui/button"
-import { useRouter, usePathname } from "../../../navigation"
 
 export function LanguageToggler() {
     const router = useRouter()
@@ -22,10 +28,16 @@ export function LanguageToggler() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => router.push(pathname, { locale: "en" })}>
-                    English
+                    <div className="flex gap-3">
+                        <Image src={USAFlag} alt="usa-flag" style={{width: "20px", height: "auto"}} />
+                        English
+                    </div>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push(pathname, { locale: "pt" })}>
-                    Português
+                    <div className="flex gap-3">
+                        <Image src={BrazilFlag} alt="usa-flag" style={{width: "20px", height: "auto"}} />
+                        Português
+                    </div>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

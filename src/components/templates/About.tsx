@@ -18,14 +18,14 @@ import "aos/dist/aos.css"
 export function About() {
     const t = useTranslations("AboutMe")
 
-    // React.useEffect(() => {
-    //     AOS.init({
-    //         duration: 800,
-    //         easing: "ease-in-out",
-    //         once: false,
-    //         mirror: false
-    //     })
-    // }, [])
+    React.useEffect(() => {
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: false,
+            mirror: false
+        })
+    }, [])
 
     return (
         <section className="bg-background-secondary" id="about">

@@ -12,22 +12,8 @@ import { GitBranch, Link } from "@phosphor-icons/react"
 // Types
 import { projectDataInterface } from "@/@types/interfaces"
 
-// AOS
-import AOS from "aos"
-import "aos/dist/aos.css"
-
-
 export default function Card(project: projectDataInterface) {
     const divRef = React.useRef<HTMLDivElement>(null)
-
-    React.useEffect(() => {
-        AOS.init({
-            duration: 800,
-            easing: "ease-in-out",
-            once: false,
-            mirror: false
-        })
-    })
 
     React.useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -52,7 +38,7 @@ export default function Card(project: projectDataInterface) {
     }, [])
 
     return (
-        <div className="bg-black border border-white rounded-lg flex flex-col" data-aos="fade-up">
+        <div className="bg-black border border-white rounded-lg flex flex-col">
             <GlowingImage image={project.image} alt={project.title} />
             <div className="p-6 flex flex-col h-full">
                 <h5 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>

@@ -2,7 +2,7 @@
 import * as React from "react"
 
 // Next
-import Subtract from "@/assets/Subtract.svg"
+import Subtract from "@/assets/footer/Subtract.svg"
 import Image from "next/image"
 
 export default function TextoBrilhante() {
@@ -24,7 +24,7 @@ export default function TextoBrilhante() {
 
     return (
         <div onMouseMove={(e) => handleMouseMove(e)} className={className}>
-            <Image className="z-[5]" src={Subtract} alt="Subtract" width={230} height={50} />
+            <Image className="z-[5]" src={Subtract} alt="Subtract" style={{width: "auto", height: "auto"}} />
         </div>
     )
 }

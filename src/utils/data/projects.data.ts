@@ -1,9 +1,9 @@
 import { projectDataInterface, socialMediaDataInterface } from "@/@types/interfaces"
 
-import ProjectImage from "@/assets/ProjectImage.png"
-import VoiceoverPortfolio from "@/assets/VoiceoverPortfolio.png"
-import ExpenseManager from "@/assets/ExpenseManager.svg"
-import AxeNoticias from "@/assets/AxeNoticias.svg"
+import ProjectImage from "@/assets/projects/ProjectImage.png"
+import VoiceoverPortfolio from "@/assets/projects/VoiceoverPortfolio.png"
+import ExpenseManager from "@/assets/projects/ExpenseManager.svg"
+import AxeNoticias from "@/assets/projects/AxeNoticias.svg"
 
 import { useTranslations } from "next-intl"
 

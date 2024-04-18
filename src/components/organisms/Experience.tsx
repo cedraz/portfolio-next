@@ -1,6 +1,6 @@
 import * as React from "react"
 import Image from "next/image"
-import TITAN from "@/assets/TITAN.png"
+import TITAN from "@/assets/journey/TITAN.png"
 
 // Components
 import { Timeline, TimelineData } from "../molecules/Timeline"
