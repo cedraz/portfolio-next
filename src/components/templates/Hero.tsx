@@ -34,7 +34,7 @@ export function Hero() {
 
     return (
         <section className="bg-background-main">
-            <div className="grid mx-auto max-w-7xl px-6 py-20 lg:py-8 lg:gap-8 xl:gap-0 lg:grid-cols-12">
+            <div className="grid mx-auto max-w-7xl px-6 py-20 lg:gap-8 xl:gap-0 lg:grid-cols-12">
                 <div className="lg:mr-auto place-self-center sm:col-span-12 lg:col-span-7">
                     <h1 className="max-w-2xl text-4xl text-center lg:text-start mb-2 font-extrabold tracking-tight leading-none md:text-5xl text-color-subtitle">
                         {t("h1")}

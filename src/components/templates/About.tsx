@@ -2,7 +2,7 @@
 import * as React from "react"
 import Image from "next/image"
 
-import ProfilePic from "@/assets/ProfilePic.png"
+import AboutImage from "@/assets/about/about.png"
 
 // Components
 import Title from "../atoms/Title"
@@ -36,7 +36,7 @@ export function About() {
                     </Title>
                 </div>
                 <div className="hidden lg:mt-0 lg:col-span-6 align-self-center lg:flex max-w-[500px] h-fit" >
-                    <Image src={ProfilePic} alt="contact-me"/>
+                    <Image src={AboutImage} alt="contact-me"/>
                 </div>
                 <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6" >
                     <AboutCard />

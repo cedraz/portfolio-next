@@ -1,6 +1,4 @@
 import * as React from "react"
-import Image from "next/image"
-import TITAN from "@/assets/journey/TITAN.png"
 
 // Components
 import { Timeline, TimelineData } from "../molecules/Timeline"
@@ -8,6 +6,7 @@ import { Timeline, TimelineData } from "../molecules/Timeline"
 // next intl
 import { useTranslations } from "next-intl"
 import { Button } from "../ui/button"
+import { ExperienceCarousel } from "../molecules/ExperienceCarousel"
 
 const Data1 = () => {
     const t = useTranslations("Journey.timeline1")
@@ -25,8 +24,8 @@ const Data2 = () => {
     const t = useTranslations("Journey.timeline1")
 
     return (
-        <div className="flex flex-col mt-5">
-            <div className="overflow-hidden">
+        <div className="flex mt-5 flex-col lg:flex-row gap-3">
+            {/* <div className="overflow-hidden">
                 <Image 
                     src={TITAN}
                     alt="TITAN logo"
@@ -34,8 +33,9 @@ const Data2 = () => {
                         borderRadius: "0.75rem"
                     }}
                 />
-            </div>
-            <div className="flex flex-col gap-3">
+            </div> */}
+            <ExperienceCarousel />
+            <div className="flex flex-col gap-3 w-full lg:w-[30%]">
                 <p className="mt-3">
                     {t("2.p")}
                 </p>
@@ -43,6 +43,7 @@ const Data2 = () => {
                     <a href="https://www.linkedin.com/in/cedraz/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                 </Button>
             </div>
+            
         </div>
     )
 }
