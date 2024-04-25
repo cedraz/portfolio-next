@@ -40,7 +40,7 @@ const Data2 = () => {
                     {t("2.p")}
                 </p>
                 <Button className="w-fit mt-3" asChild>
-                    <a href="linkedin.com/company/ufbatitan/mycompany/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                    <a href="https://linkedin.com/company/ufbatitan/mycompany/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                 </Button>
             </div>
             
