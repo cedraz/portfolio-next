@@ -35,10 +35,10 @@ export function About() {
                         {t("h1")}
                     </Title>
                 </div>
-                <div className="hidden lg:mt-0 lg:col-span-6 align-self-center lg:flex max-w-[500px] h-fit" >
+                <div className="hidden lg:mt-0 lg:col-span-6 align-self-center lg:flex max-w-[500px] h-fit" data-aos="fade-right">
                     <Image src={AboutImage} alt="contact-me"/>
                 </div>
-                <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6" >
+                <div className="lg:justify-self-end place-self-center col-span-12 lg:col-span-6" data-aos="fade-left">
                     <AboutCard />
                 </div>
             </div>

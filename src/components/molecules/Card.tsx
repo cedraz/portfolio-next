@@ -38,7 +38,7 @@ export default function Card(project: projectDataInterface) {
     }, [])
 
     return (
-        <div className="bg-black border border-white rounded-lg flex flex-col">
+        <div className="bg-black border border-white rounded-lg flex flex-col" data-aos="fade-up">
             <GlowingImage image={project.image} alt={project.title} />
             <div className="p-6 flex flex-col h-full">
                 <h5 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>

@@ -35,21 +35,21 @@ export function Hero() {
     return (
         <section className="bg-background-main">
             <div className="grid mx-auto max-w-7xl px-6 py-20 lg:gap-8 xl:gap-0 lg:grid-cols-12">
-                <div className="lg:mr-auto place-self-center sm:col-span-12 lg:col-span-7">
+                <div className="lg:mr-auto place-self-center sm:col-span-12 lg:col-span-7" data-aos="fade-right">
                     <h1 className="max-w-2xl text-4xl text-center lg:text-start mb-2 font-extrabold tracking-tight leading-none md:text-5xl text-color-subtitle">
                         {t("h1")}
                     </h1>
-                    <div className="min-h-[81px] sm:min-h-[41px] lg:min-h-[100px] teste:min-h-[55px] text-center lg:text-start">
+                    <div className="min-h-[81px] sm:min-h-[41px] lg:min-h-[100px] teste:min-h-[55px] text-center lg:text-start" >
                         <TypingAnimation />
                     </div>
-                    <div className="mr-auto mt-5 text-center lg:text-start">
+                    <div className="mr-auto mt-5 text-center lg:text-start" >
                         <Button onClick={() => router.push("#contact")} >
                             {t("button")}
                         </Button>
                     </div>
                 </div>
 
-                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex" data-aos="fade-left">
                     <Image src={ProfilePic} width={700} height={700} alt="profile-pic" />
                 </div>
             </div>

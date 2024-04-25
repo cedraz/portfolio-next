@@ -45,11 +45,11 @@ export function ContactMe() {
                     </Title>
                 </div>
                 <div className="hidden place-self-center lg:mt-0 lg:col-span-6 lg:flex max-w-[500px] h-fit" >
-                    <a href="https://expense-manager-front.vercel.app/" target="_blank" rel="noreferrer" >
+                    <a href="https://expense-manager-front.vercel.app/" target="_blank" rel="noreferrer" data-aos="fade-right">
                         <Image src={contactme} alt="contact-me"/>
                     </a>
                 </div>
-                <div className="flex flex-col items-end justify-center col-span-12 lg:col-span-6 min-h-[736px]" >
+                <div className="flex flex-col items-end justify-center col-span-12 lg:col-span-6 min-h-[736px]" data-aos="fade-left">
                     <Tabs defaultValue="email" className="w-full teste:w-[550px]">
                         <TabsList className="grid grid-cols-2">
                             <TabsTrigger value="email">Email</TabsTrigger>

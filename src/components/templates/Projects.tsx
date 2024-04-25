@@ -76,10 +76,10 @@ export function Projects() {
     return (
         <section ref={sectionRef} className="bg-background-secondary h-full" id="projects">
             <div className="mx-auto max-w-7xl px-6 py-16 flex flex-col items-center">
-                <Title withMargin={true}>
+                <Title withMargin={true} data-aos="fade-up">
                     { t("h1")}
                 </Title>
-                <div className="flex flex-row flex-wrap gap-3 items-center justify-center">
+                <div className="flex flex-row flex-wrap gap-3 items-center justify-center" data-aos="fade-up">
                     {projectsCategories.map((category, index) => (
                         <Button
                             key={index}
