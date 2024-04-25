@@ -12,14 +12,6 @@ import { useTranslations } from "next-intl"
 export function Footer() {
     const t = useTranslations("Footer")
 
-    const links = [
-        { href: "#", title: t("footerItems.home") },
-        { href: "#about", title: t("footerItems.aboutMe") },
-        { href: "#journey", title: t("footerItems.journey") },
-        { href: "#projects", title: t("footerItems.projects") },
-        { href: "#contact", title: t("footerItems.contactMe") },
-    ]
-
     return (
         <footer className="bg-background-secondary shadow">
             <div className="w-full max-w-7xl mx-auto px-6 p-4 md:py-8">
@@ -27,7 +19,7 @@ export function Footer() {
                     <a href="#" className="flex justify-center sm:justify-start items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <GlowingText />
                     </a>
-                    <FooterItems links={links}/>
+                    <FooterItems />
                     <FooterSocialLinks />
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />

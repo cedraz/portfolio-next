@@ -1,9 +1,10 @@
 import { projectDataInterface, socialMediaDataInterface } from "@/@types/interfaces"
 
-import ProjectImage from "@/assets/ProjectImage.png"
-import VoiceoverPortfolio from "@/assets/VoiceoverPortfolio.png"
-import ExpenseManager from "@/assets/ExpenseManager.svg"
-import AxeNoticias from "@/assets/AxeNoticias.svg"
+import ProjectImage from "@/assets/projects/ProjectImage.png"
+import VoiceoverPortfolio from "@/assets/projects/VoiceoverPortfolio.png"
+import ExpenseManager from "@/assets/projects/expenseManager.png"
+import AxeNoticias from "@/assets/projects/AxeNoticias.svg"
+import Teste from "@/assets/projects/teste.png"
 
 import { useTranslations } from "next-intl"
 
@@ -24,16 +25,6 @@ export function projectsObject() {
             tags: ["next.js", "react", "typescript", "material ui", "axios", "react-hook-form", "toastify", "vercel"]
         },
         {
-            id: 2,
-            title: t("2.title"),
-            description: t("2.description"),
-            category: "backend",
-            image: ExpenseManager,
-            link: "https://gerenciadordedespesas.vercel.app/",
-            repository: "https://github.com/cedraz/expense-manager-back",
-            tags: ["node", "typescript", "aws ec2", "aws rds", "fastify", "docker", "prisma orm", "postgresql"]
-        },
-        {
             id: 3,
             title: t("3.title"),
             description: t("3.description"),
@@ -44,14 +35,14 @@ export function projectsObject() {
             tags: ["next.js", "react", "typescript", "material ui", "swiper", "emailjs", "vercel"]
         },
         {
-            id: 4,
-            title: t("4.title"),
-            description: t("4.description"),
-            category: "backend",
-            image: ProjectImage,
-            link: "",
-            repository: "https://github.com/cedraz/desafio-backend-picpay",
-            tags: ["bun", "typescript", "elysia", "prisma orm", "postgresql", "aws rds", "zod", "axios"]
+            id: 10,
+            title: t("10.title"),
+            description: t("10.description"),
+            category: "frontend",
+            image: Teste,
+            link: "https://cedraz.vercel.app/pt",
+            repository: "https://github.com/cedraz/portfolio-next",
+            tags: ["next.js", "react", "typescript", "atomic design", "shadcn ui", "tailwind css", "phosphor icons", "axios", "nodemailer"]
         },
         {
             id: 5,
@@ -62,6 +53,26 @@ export function projectsObject() {
             link: "https://axenoticias.vercel.app/",
             repository: "https://github.com/cedraz/desafio-ptdev-front",
             tags: ["html", "css", "javascript", "vercel"]
+        },
+        {
+            id: 2,
+            title: t("2.title"),
+            description: t("2.description"),
+            category: "backend",
+            image: ExpenseManager,
+            link: "https://gerenciadordedespesas.vercel.app/",
+            repository: "https://github.com/cedraz/expense-manager-back",
+            tags: ["node", "typescript", "aws ec2", "aws rds", "fastify", "docker", "prisma orm", "postgresql"]
+        },
+        {
+            id: 4,
+            title: t("4.title"),
+            description: t("4.description"),
+            category: "backend",
+            image: ProjectImage,
+            link: "",
+            repository: "https://github.com/cedraz/desafio-backend-picpay",
+            tags: ["bun", "typescript", "elysia", "prisma orm", "postgresql", "aws rds", "zod", "axios"]
         },
         {
             id: 6,
@@ -102,16 +113,6 @@ export function projectsObject() {
             link: "",
             repository: "https://github.com/cedraz/desafio-frontend-vflows",
             tags: ["html", "css", "bootstrap", "javascript", "jquery"]
-        },
-        {
-            id: 10,
-            title: t("10.title"),
-            description: t("10.description"),
-            category: "frontend",
-            image: ProjectImage,
-            link: "",
-            repository: "https://github.com/cedraz/portfolio-next",
-            tags: ["next.js", "react", "typescript", "atomic design", "shadcn ui", "tailwind css", "phosphor icons", "axios", "nodemailer"]
         },
         {
             id: 11,
