@@ -8,9 +8,9 @@
   "Hero": {
     "h1": "Olá, meu nome é Ícaro Cedraz e eu sou",
     "typingAnimation": {
-      "1": "Desenvolvedor Full Stack",
+      "1": "Desenvolvedor Backend Pleno",
       "2": "Desenvolvedor Frontend",
-      "3": "Desenvolvedor Backend"
+      "3": "Desenvolvedor Full Stack"
     },
     "button": "Entre em contato"
   },
@@ -29,7 +29,7 @@
         "h2": "Pull Requests",
         "p": "50+ pull requests"
       },
-      "p": "Olá, me chamo Ícaro Cedraz, tenho 20 anos e comecei a estudar programação aos 17 anos, fiz alguns cursos e sempre foquei em desenvolver projetos. Ao entrar no curso de Engenharia da Computação na UFBA (Universidade federal da Bahia) onde ingressei na empresa júnior de computação TITAN eu pude atuar no mercado desenvolvendo aplicações tanto front-end quanto back-end, trabalhando com typescript, com maior foco no back-end. O que me destaca não é apenas minha proficiência técnica, mas também minha paixão por ficar atualizado nas tendências do mercado e adotar as melhores práticas para fornecer resultados ideais.",
+      "p": "Olá, me chamo Ícaro Cedraz, tenho 21 anos e comecei a estudar programação aos 17 anos, fiz alguns cursos e sempre foquei em desenvolver projetos. Ao entrar no curso de Engenharia da Computação na UFBA (Universidade federal da Bahia) onde ingressei na empresa júnior de computação TITAN eu pude atuar no mercado desenvolvendo aplicações tanto front-end quanto back-end, trabalhando com typescript, com maior foco no back-end. O que me destaca não é apenas minha proficiência técnica, mas também minha paixão por ficar atualizado nas tendências do mercado e adotar as melhores práticas para fornecer resultados ideais.",
       "button": "Currículo"
     }
   },
@@ -38,17 +38,14 @@
     "timeline1": {
       "title": "Experiência",
       "1": {
-        "time": "Janeiro de 2024 - Atualmente",
         "title": "Gerente de backend na TITAN ci",
         "p": "Como gerente de backend, assumi um cargo de lideração que me auxiliou imensamente na minha carreira. Na gerência adiquiri ampla experiência no desenvolvimento de APIs REST, utilizando Node.js, Typescript, Prisma ORM, Postgresql, Docker, Swagger para documentação, Zod para validações e Jest para criação de testes. Como líder da gerência de backend fiquei responsável por capacitar os membros envolvidos quanto ao SCRUM, lógica de programação e desenvolvimento de APIs utilizando as tecnologias mencionadas."
       },
       "2": {
-        "time": "Setembro de 2023 - Janeiro de 2024",
         "title": "Desenvolvedor Full stack na TITAN ci",
         "p": "Como desenvolvedor full stack, fiquei responsável por desenvolver aplicações web completas, desde o front-end até o back-end. Utilizei diversas tecnologias, dentre elas: Typescript, Node.js, React, Next.js, Prisma ORM, Postgresql, Docker, Swagger, Zod e Jest."
       },
       "3": {
-        "time": "Maio de 2023 - Setembro de 2023",
         "title": "Trainee na diretoria de Desenvolvimento na TITAN ci"
       }
     },
@@ -72,6 +69,38 @@
         "time": "Janeiro de 2019 - Dezembro de 2022",
         "title": "Ensino médio no Colégio Oficina"
       }
+    },
+    "warlocks": {
+      "1": {
+        "title": "Desenvolvedor Fullstack Júnior",
+        "p": "Atuei no desenvolvimento de uma solução completa, construindo uma API RESTful robusta com Nest.js. A arquitetura do sistema utilizava RabbitMQ para o gerenciamento de filas e tarefas assíncronas. Paralelamente, desenvolvi um Bot para Discord e criei dashboards e páginas front-end responsivas com React, com foco em otimização de SEO. Todo o trabalho foi conduzido de forma colaborativa, aplicando a metodologia SCRUM e utilizando a plataforma Linear para garantir entregas ágeis e eficientes."
+      }
+    },
+    "bluesaude": {
+      "1": {
+        "title": "Desenvolvedor Backend Pleno",
+        "p": "Participei ativamente no desenvolvimento de um sistema White-label complexo, focando na construção de uma API RESTful escalável com Nest.js. A arquitetura da solução contava com o gerenciamento de filas assíncronas utilizando BullMQ. Fui responsável pela implementação de um sistema de autenticação e permissionamento granular e customizável, pela integração com APIs externas para pagamentos, e pelo desenvolvimento de uma funcionalidade para upload de dados via planilhas. Toda a infraestrutura foi orquestrada com Docker e o trabalho em equipe seguiu a metodologia SCRUM, com gerenciamento pela plataforma monday.com."
+      }
+    },
+    "months": {
+      "0": "jan",
+      "1": "fev",
+      "2": "mar",
+      "3": "abr",
+      "4": "mai",
+      "5": "jun",
+      "6": "jul",
+      "7": "ago",
+      "8": "set",
+      "9": "out",
+      "10": "nov",
+      "11": "dez"
+    },
+    "of": "de",
+    "present": "o momento",
+    "duration": {
+      "months": "{count} {count, plural, one {mês} other {meses}}",
+      "yearsAndMonths": "{years} {years, plural, one {ano} other {anos}} {months, plural, =0 {} one {e 1 mês} other {e # meses}}"
     }
   },
   "Projects": {
@@ -171,12 +200,14 @@
       "errorRequired": "Campo de mensagem é obrigatório.",
       "errorMinCharacters": "Mensagem deve ter no mínimo 5 caracteres."
     },
-    "submit": "Enviar mensagem"
+    "submit": "Enviar mensagem",
+    "submitSuccess": "Você enviou os seguintes valores: ",
+    "submitLoading": "Enviando..."
   },
   "Footer": {
     "p": "Feito com ❤️ por Ícaro Cedraz",
     "copyToClipboard": "Copiado para a área de transferência",
-    "footerItems":  {
+    "footerItems": {
       "home": "Início",
       "aboutMe": "Sobre mim",
       "journey": "Jornada",
