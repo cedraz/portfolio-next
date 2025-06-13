@@ -8,9 +8,9 @@
   "Hero": {
     "h1": "Hi, my name is Ícaro Cedraz and I'm a",
     "typingAnimation": {
-      "1": "Full Stack Developer",
+      "1": "Mid-Level Backend Developer",
       "2": "Frontend Developer",
-      "3": "Backend Developer"
+      "3": "Full Stack Developer"
     },
     "button": "Contact me"
   },
@@ -29,7 +29,7 @@
         "h2": "Pull Requests",
         "p": "50+ pull requests"
       },
-      "p": "Hello, my name is Ícaro Cedraz, I'm 20 years old, and I started studying programming at the age of 17. I've taken some courses and have always focused on developing projects. Upon entering the Computer Engineering program at UFBA (Federal University of Bahia), where I joined the junior computing company TITAN, I was able to engage in the market by developing applications both on the front-end and back-end, working with TypeScript, with a greater focus on the back-end. What sets me apart is not only my technical proficiency but also my passion for staying updated on market trends and adopting best practices to deliver optimal results.",
+      "p": "Hello, my name is Ícaro Cedraz, I'm 21 years old, and I started studying programming at the age of 17. I've taken some courses and have always focused on developing projects. Upon entering the Computer Engineering program at UFBA (Federal University of Bahia), where I joined the junior computing company TITAN, I was able to engage in the market by developing applications both on the front-end and back-end, working with TypeScript, with a greater focus on the back-end. What sets me apart is not only my technical proficiency but also my passion for staying updated on market trends and adopting best practices to deliver optimal results.",
       "button": "Download CV"
     }
   },
@@ -38,17 +38,14 @@
     "timeline1": {
       "title": "Experience",
       "1": {
-        "time": "January 2024 - Present",
         "title": "Backend Manager at TITAN ci",
         "p": "As a backend manager, I took on a leadership role that greatly assisted in my career growth. In this role, I gained extensive experience in developing RESTful APIs using Node.js, TypeScript, Prisma ORM, PostgreSQL, Docker, Swagger for documentation, Zod for validations, and Jest for test creation. As the leader of the backend team, I was responsible for training team members in SCRUM methodologies, programming logic, and API development using the mentioned technologies."
       },
       "2": {
-        "time": "September 2023 - January 2024",
         "title": "Full Stack Developer at TITAN ci",
         "p": "As a full-stack developer, I was responsible for developing complete web applications, spanning from the front-end to the back-end. I utilized various technologies, including TypeScript, Node.js, React, Next.js, Prisma ORM, PostgreSQL, Docker, Swagger, Zod, and Jest."
       },
       "3": {
-        "time": "May 2023 - September 2023",
         "title": "Trainee at the Development Directorate at TITAN ci"
       }
     },
@@ -72,6 +69,38 @@
         "time": "January 2019 - December 2022",
         "title": "High school at Colégio Oficina"
       }
+    },
+    "warlocks": {
+      "1": {
+        "title": "Junior Fullstack Developer",
+        "p": "I worked on the development of a complete solution, building a robust RESTful API with Nest.js. The system's architecture used RabbitMQ for managing queues and asynchronous tasks. Concurrently, I developed a Bot for Discord and created responsive front-end dashboards and pages with React, focusing on SEO optimization. All work was conducted collaboratively, applying the SCRUM methodology and using the Linear platform to ensure agile and efficient deliveries."
+      }
+    },
+    "bluesaude": {
+      "1": {
+        "title": "Mid-Level Backend Developer",
+        "p": "I actively participated in the development of a complex White-label system, focusing on building a scalable RESTful API with Nest.js. The solution's architecture included managing asynchronous queues using BullMQ. I was responsible for implementing a granular and customizable authentication and permission system, integrating with external APIs for payments, and developing a feature for data upload via spreadsheets. The entire infrastructure was orchestrated with Docker, and the teamwork followed the SCRUM methodology, managed on the monday.com platform."
+      }
+    },
+    "months": {
+      "0": "Jan",
+      "1": "Feb",
+      "2": "Mar",
+      "3": "Apr",
+      "4": "May",
+      "5": "Jun",
+      "6": "Jul",
+      "7": "Aug",
+      "8": "Sep",
+      "9": "Oct",
+      "10": "Nov",
+      "11": "Dec"
+    },
+    "of": "of",
+    "present": "present",
+    "duration": {
+      "months": "{count} {count, plural, one {month} other {months}}",
+      "yearsAndMonths": "{years} {years, plural, one {year} other {years}} {months, plural, =0 {} one {and 1 month} other {and # months}}"
     }
   },
   "Projects": {
@@ -171,7 +200,9 @@
       "errorRequired": "Message field is required.",
       "errorMinCharacters": "Message must have at least 5 characters."
     },
-    "submit": "Send message"
+    "submit": "Send message",
+    "submitSuccess": "You submitted the following values: ",
+    "submitLoading": "Sending..."
   },
   "Footer": {
     "p": "Made with ❤️ by Ícaro Cedraz",
