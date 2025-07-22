@@ -1,0 +1,8 @@
+services:
+  web:
+    container_name: portfolio-next
+    image: icarocedraz/portfolio-next:latest
+    ports:
+      - "3333:3333"
+    env_file:
+      - .env.prod
