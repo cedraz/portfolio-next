@@ -35,7 +35,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
 
 USER nextjs
 
-EXPOSE 3333
+EXPOSE 3002
 
 ENTRYPOINT ["dumb-init", "--"]
 CMD ["npm", "start"]

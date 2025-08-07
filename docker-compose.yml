@@ -3,6 +3,6 @@ services:
     container_name: portfolio-next
     image: icarocedraz/portfolio-next:latest
     ports:
-      - "3333:3333"
+      - "3002:3002"
     env_file:
       - .env.prod
